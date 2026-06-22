@@ -989,7 +989,6 @@
   <string name="hdr_bt_2020">BT.2020</string>
   <string name="hdr_linear_title">Linear HDR</string>
   <string name="anim_elastic">Elastic Bounce</string>
-  <string name="anim_cinematic">Cinematic Scale</string>
   <string name="anim_slide_up">Slide Up</string>
   <string name="anim_minimal">Minimal Fade</string>
   <string name="anim_fade_dark">Fade from Black</string>
