@@ -3,6 +3,7 @@ package app.gyrolet.mpvrx.ui.browser.dialogs
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import app.gyrolet.mpvrx.R
 import androidx.compose.ui.unit.dp
@@ -36,6 +37,7 @@ fun FolderSortDialog(
   val showFolderThumbnails by browserPreferences.showFolderThumbnails.collectAsState()
   val unlimitedNameLines by appearancePreferences.unlimitedNameLines.collectAsState()
   val centerGridTitles by browserPreferences.centerGridTitles.collectAsState()
+  val context = LocalContext.current
   val folderViewMode by browserPreferences.folderViewMode.collectAsState()
   val mediaLayoutMode by browserPreferences.mediaLayoutMode.collectAsState()
   val manualGridColumnsEnabled by browserPreferences.manualGridColumnsEnabled.collectAsState()
@@ -116,8 +118,8 @@ fun FolderSortDialog(
     getLabelForType = { type, _ ->
       when (type) {
         FolderSortType.Title.displayName -> Pair("A-Z", "Z-A")
-        FolderSortType.Date.displayName -> Pair(stringResource(R.string.browser_oldest), stringResource(R.string.browser_newest))
-        FolderSortType.Size.displayName -> Pair(stringResource(R.string.browser_smallest), stringResource(R.string.browser_largest))
+        FolderSortType.Date.displayName -> Pair(context.getString(R.string.browser_oldest), context.getString(R.string.browser_newest))
+        FolderSortType.Size.displayName -> Pair(context.getString(R.string.browser_smallest), context.getString(R.string.browser_largest))
         else -> Pair("Asc", "Desc")
       }
     },
@@ -265,6 +267,7 @@ fun VideoSortDialog(
   val mediaLayoutMode by browserPreferences.mediaLayoutMode.collectAsState()
   val folderViewMode by browserPreferences.folderViewMode.collectAsState()
   val centerGridTitles by browserPreferences.centerGridTitles.collectAsState()
+  val context = LocalContext.current
   val manualGridColumnsEnabled by browserPreferences.manualGridColumnsEnabled.collectAsState()
   val folderGridColumnsPortrait by browserPreferences.folderGridColumnsPortrait.collectAsState()
   val folderGridColumnsLandscape by browserPreferences.folderGridColumnsLandscape.collectAsState()
@@ -343,9 +346,9 @@ fun VideoSortDialog(
     getLabelForType = { type, _ ->
       when (type) {
         VideoSortType.Title.displayName -> Pair("A-Z", "Z-A")
-        VideoSortType.Duration.displayName -> Pair(stringResource(R.string.browser_shortest), stringResource(R.string.browser_longest))
-        VideoSortType.Date.displayName -> Pair(stringResource(R.string.browser_oldest), stringResource(R.string.browser_newest))
-        VideoSortType.Size.displayName -> Pair(stringResource(R.string.browser_smallest), stringResource(R.string.browser_biggest))
+        VideoSortType.Duration.displayName -> Pair(context.getString(R.string.browser_shortest), context.getString(R.string.browser_longest))
+        VideoSortType.Date.displayName -> Pair(context.getString(R.string.browser_oldest), context.getString(R.string.browser_newest))
+        VideoSortType.Size.displayName -> Pair(context.getString(R.string.browser_smallest), context.getString(R.string.browser_biggest))
         else -> Pair("Asc", "Desc")
       }
     },
@@ -520,6 +523,7 @@ fun FileSystemSortDialog(
   val videoGridColumnsPortrait by browserPreferences.videoGridColumnsPortrait.collectAsState()
   val videoGridColumnsLandscape by browserPreferences.videoGridColumnsLandscape.collectAsState()
 
+  val context = LocalContext.current
   val configuration = androidx.compose.ui.platform.LocalConfiguration.current
   val isLandscape = configuration.orientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE
   val isTablet = configuration.smallestScreenWidthDp >= 600
@@ -593,8 +597,8 @@ fun FileSystemSortDialog(
     getLabelForType = { type, _ ->
       when (type) {
         FolderSortType.Title.displayName -> Pair("A-Z", "Z-A")
-        FolderSortType.Date.displayName -> Pair(stringResource(R.string.browser_oldest), stringResource(R.string.browser_newest))
-        FolderSortType.Size.displayName -> Pair(stringResource(R.string.browser_smallest), stringResource(R.string.browser_largest))
+        FolderSortType.Date.displayName -> Pair(context.getString(R.string.browser_oldest), context.getString(R.string.browser_newest))
+        FolderSortType.Size.displayName -> Pair(context.getString(R.string.browser_smallest), context.getString(R.string.browser_largest))
         else -> Pair("Asc", "Desc")
       }
     },
