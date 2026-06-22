@@ -393,7 +393,7 @@ private fun SelectionTopBar(
         ) {
           Icon(
             Icons.Filled.PlayArrow,
-            contentDescription = "Play",
+            contentDescription = stringResource(R.string.browser_play),
             modifier = Modifier.size(28.dp),
             tint = MaterialTheme.colorScheme.primary,
           )

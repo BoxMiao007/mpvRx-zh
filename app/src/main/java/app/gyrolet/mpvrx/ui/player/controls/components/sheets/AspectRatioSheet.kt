@@ -2,6 +2,8 @@ package app.gyrolet.mpvrx.ui.player.controls.components.sheets
 
 import app.gyrolet.mpvrx.ui.icons.Icon
 import app.gyrolet.mpvrx.ui.icons.Icons
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -54,7 +56,7 @@ fun AspectRatioSheet(
 ) {
   val presetRatios =
     listOf(
-      AspectRatio("Default", -1.0),
+      AspectRatio(stringResource(R.string.aspect_ratio_presets), -1.0),
       AspectRatio("4:3", 4.0 / 3.0),
       AspectRatio("16:9", 16.0 / 9.0),
       AspectRatio("16:10", 16.0 / 10.0),
@@ -83,7 +85,7 @@ fun AspectRatioSheet(
 
       // Preset ratios
       Text(
-        text = "Presets",
+        text = stringResource(R.string.aspect_ratio_presets),
         style = MaterialTheme.typography.titleSmall,
         modifier =
           Modifier
@@ -109,7 +111,7 @@ fun AspectRatioSheet(
       // Custom ratios
       if (customRatios.isNotEmpty()) {
         Text(
-          text = "Custom",
+          text = stringResource(R.string.aspect_ratio_custom),
           style = MaterialTheme.typography.titleSmall,
           modifier =
             Modifier
@@ -209,7 +211,7 @@ private fun AddCustomRatioRow(
           heightText = it.filter { char -> char.isDigit() || char == '.' }
           errorMessage = null
         },
-        label = { Text("Height") },
+        label = { Text(stringResource(R.string.aspect_ratio_height)) },
         isError = errorMessage != null,
         keyboardOptions =
           KeyboardOptions(
@@ -248,7 +250,7 @@ private fun AddCustomRatioRow(
           }
         },
       ) {
-        Icon(Icons.Default.Add, contentDescription = "Add")
+        Icon(Icons.Default.Add, contentDescription = stringResource(R.string.player_controls_add))
       }
     }
 

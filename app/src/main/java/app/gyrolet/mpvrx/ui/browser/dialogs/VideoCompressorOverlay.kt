@@ -93,6 +93,8 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -343,7 +345,7 @@ private fun CompressorConfigSurface(
 ) {
   val pagerState = rememberPagerState(pageCount = { 3 })
   val scope = rememberCoroutineScope()
-  val tabs = listOf("Presets", "Video", "Audio")
+  val tabs = listOf(stringResource(R.string.compressor_presets), stringResource(R.string.compressor_video), stringResource(R.string.compressor_audio))
   val originalMb = state.originalSize / (1024f * 1024f)
   val actualEstimate = maxOf(state.targetSizeMb, state.minimumSizeMb)
   val isLarger = originalMb > 0f && actualEstimate > (originalMb + 0.01f)
@@ -370,14 +372,14 @@ private fun CompressorConfigSurface(
         modifier = Modifier.windowInsetsPadding(WindowInsets.systemBars),
         title = {
           Text(
-            text = "Compressor",
+            text = stringResource(R.string.compressor_title),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold,
           )
         },
         navigationIcon = {
           IconButton(onClick = onClose) {
-            Icon(Icons.Default.Close, contentDescription = "Close")
+            Icon(Icons.Default.Close, contentDescription = stringResource(R.string.player_controls_close))
           }
         },
         actions = {
@@ -1138,7 +1140,7 @@ private fun CompressorResultSurface(
         title = { Text("Compressor", fontWeight = FontWeight.Bold) },
         navigationIcon = {
           IconButton(onClick = onClose) {
-            Icon(Icons.Default.Close, contentDescription = "Close")
+            Icon(Icons.Default.Close, contentDescription = stringResource(R.string.player_controls_close))
           }
         },
       )
@@ -1274,7 +1276,7 @@ private fun CompressorIssueSurface(
         title = { Text("Compressor", fontWeight = FontWeight.Bold) },
         navigationIcon = {
           IconButton(onClick = onClose) {
-            Icon(Icons.Default.Close, contentDescription = "Close")
+            Icon(Icons.Default.Close, contentDescription = stringResource(R.string.player_controls_close))
           }
         },
       )

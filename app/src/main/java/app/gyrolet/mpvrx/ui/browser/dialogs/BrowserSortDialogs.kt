@@ -3,6 +3,8 @@ package app.gyrolet.mpvrx.ui.browser.dialogs
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import androidx.compose.ui.unit.dp
 import app.gyrolet.mpvrx.preferences.AppearancePreferences
 import app.gyrolet.mpvrx.preferences.BrowserPreferences
@@ -61,7 +63,7 @@ fun FolderSortDialog(
 
   val folderGridColumnSelector = if (mediaLayoutMode == MediaLayoutMode.GRID && manualGridColumnsEnabled) {
     GridColumnSelector(
-      label = "Folder Grid Columns (${if (isLandscape) "Landscape" else "Portrait"})",
+      label = "Folder Grid Columns (${if (isLandscape) stringResource(R.string.browser_landscape) else stringResource(R.string.browser_portrait)})",
       currentValue = folderGridColumns.coerceIn(1, maxColumns),
       onValueChange = {
         if (isLandscape) browserPreferences.folderGridColumnsLandscape.set(it)
@@ -74,7 +76,7 @@ fun FolderSortDialog(
 
   val videoGridColumnSelector = if (mediaLayoutMode == MediaLayoutMode.GRID && manualGridColumnsEnabled) {
     GridColumnSelector(
-      label = "Video Grid Columns (${if (isLandscape) "Landscape" else "Portrait"})",
+      label = "Video Grid Columns (${if (isLandscape) stringResource(R.string.browser_landscape) else stringResource(R.string.browser_portrait)})",
       currentValue = videoGridColumns.coerceIn(1, maxColumns),
       onValueChange = {
         if (isLandscape) browserPreferences.videoGridColumnsLandscape.set(it)
@@ -114,8 +116,8 @@ fun FolderSortDialog(
     getLabelForType = { type, _ ->
       when (type) {
         FolderSortType.Title.displayName -> Pair("A-Z", "Z-A")
-        FolderSortType.Date.displayName -> Pair("Oldest", "Newest")
-        FolderSortType.Size.displayName -> Pair("Smallest", "Largest")
+        FolderSortType.Date.displayName -> Pair(stringResource(R.string.browser_oldest), stringResource(R.string.browser_newest))
+        FolderSortType.Size.displayName -> Pair(stringResource(R.string.browser_smallest), stringResource(R.string.browser_largest))
         else -> Pair("Asc", "Desc")
       }
     },
@@ -288,7 +290,7 @@ fun VideoSortDialog(
 
   val folderGridColumnSelector = if (mediaLayoutMode == MediaLayoutMode.GRID && manualGridColumnsEnabled) {
     GridColumnSelector(
-      label = "Folder Grid Columns (${if (isLandscape) "Landscape" else "Portrait"})",
+      label = "Folder Grid Columns (${if (isLandscape) stringResource(R.string.browser_landscape) else stringResource(R.string.browser_portrait)})",
       currentValue = folderGridColumns.coerceIn(1, maxColumns),
       onValueChange = {
         if (isLandscape) browserPreferences.folderGridColumnsLandscape.set(it)
@@ -301,7 +303,7 @@ fun VideoSortDialog(
 
   val videoGridColumnSelector = if (mediaLayoutMode == MediaLayoutMode.GRID && manualGridColumnsEnabled) {
     GridColumnSelector(
-      label = "Video Grid Columns (${if (isLandscape) "Landscape" else "Portrait"})",
+      label = "Video Grid Columns (${if (isLandscape) stringResource(R.string.browser_landscape) else stringResource(R.string.browser_portrait)})",
       currentValue = videoGridColumns.coerceIn(1, maxColumns),
       onValueChange = {
         if (isLandscape) browserPreferences.videoGridColumnsLandscape.set(it)
@@ -341,9 +343,9 @@ fun VideoSortDialog(
     getLabelForType = { type, _ ->
       when (type) {
         VideoSortType.Title.displayName -> Pair("A-Z", "Z-A")
-        VideoSortType.Duration.displayName -> Pair("Shortest", "Longest")
-        VideoSortType.Date.displayName -> Pair("Oldest", "Newest")
-        VideoSortType.Size.displayName -> Pair("Smallest", "Biggest")
+        VideoSortType.Duration.displayName -> Pair(stringResource(R.string.browser_shortest), stringResource(R.string.browser_longest))
+        VideoSortType.Date.displayName -> Pair(stringResource(R.string.browser_oldest), stringResource(R.string.browser_newest))
+        VideoSortType.Size.displayName -> Pair(stringResource(R.string.browser_smallest), stringResource(R.string.browser_biggest))
         else -> Pair("Asc", "Desc")
       }
     },
@@ -537,7 +539,7 @@ fun FileSystemSortDialog(
 
   val folderGridColumnSelector = if (mediaLayoutMode == MediaLayoutMode.GRID && manualGridColumnsEnabled) {
     GridColumnSelector(
-      label = "Folder Grid Columns (${if (isLandscape) "Landscape" else "Portrait"})",
+      label = "Folder Grid Columns (${if (isLandscape) stringResource(R.string.browser_landscape) else stringResource(R.string.browser_portrait)})",
       currentValue = folderGridColumns.coerceIn(1, maxColumns),
       onValueChange = {
         if (isLandscape) browserPreferences.folderGridColumnsLandscape.set(it)
@@ -550,7 +552,7 @@ fun FileSystemSortDialog(
 
   val videoGridColumnSelector = if (mediaLayoutMode == MediaLayoutMode.GRID && manualGridColumnsEnabled) {
     GridColumnSelector(
-      label = "Video Grid Columns (${if (isLandscape) "Landscape" else "Portrait"})",
+      label = "Video Grid Columns (${if (isLandscape) stringResource(R.string.browser_landscape) else stringResource(R.string.browser_portrait)})",
       currentValue = videoGridColumns.coerceIn(1, maxColumns),
       onValueChange = {
         if (isLandscape) browserPreferences.videoGridColumnsLandscape.set(it)
@@ -591,8 +593,8 @@ fun FileSystemSortDialog(
     getLabelForType = { type, _ ->
       when (type) {
         FolderSortType.Title.displayName -> Pair("A-Z", "Z-A")
-        FolderSortType.Date.displayName -> Pair("Oldest", "Newest")
-        FolderSortType.Size.displayName -> Pair("Smallest", "Largest")
+        FolderSortType.Date.displayName -> Pair(stringResource(R.string.browser_oldest), stringResource(R.string.browser_newest))
+        FolderSortType.Size.displayName -> Pair(stringResource(R.string.browser_smallest), stringResource(R.string.browser_largest))
         else -> Pair("Asc", "Desc")
       }
     },
@@ -710,7 +712,7 @@ fun FileSystemSortDialog(
       )
       add(
         VisibilityToggle(
-          label = "Subtitle",
+          label = stringResource(R.string.browser_subtitle),
           checked = showSubtitleIndicator,
           onCheckedChange = { browserPreferences.showSubtitleIndicator.set(it) },
         )

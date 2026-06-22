@@ -70,7 +70,7 @@ fun SubtitleSettingsTypographyCard(
   val preferences = koinInject<SubtitlesPreferences>()
   val fileManager = koinInject<FileManager>()
   var isExpanded by remember { mutableStateOf(true) }
-  val fonts by remember { mutableStateOf(mutableListOf<String>("Default")) }
+  val fonts by remember { mutableStateOf(mutableListOf<String>(context.getString(R.string.player_controls_default))) }
   var fontsLoadingIndicator: (@Composable () -> Unit)? by remember {
     val indicator: (@Composable () -> Unit) = {
       CircularProgressIndicator(Modifier.size(32.dp))
@@ -208,11 +208,11 @@ fun SubtitleSettingsTypographyCard(
           modifier = Modifier.size(32.dp),
         )
         ExposedTextDropDownMenu(
-          selectedValue = font?.ifEmpty { "Default" } ?: "Default",
+          selectedValue = font?.ifEmpty { stringResource(R.string.player_controls_default) } ?: stringResource(R.string.player_controls_default),
           options = fonts.toImmutableList(),
           label = stringResource(R.string.player_sheets_sub_typography_font),
           onValueChangedEvent = {
-            val actualFont = if (it == "Default") "" else it
+            val actualFont = if (it == context.getString(R.string.player_controls_default)) "" else it
             preferences.font.set(actualFont)
             MPVLib.setPropertyString("sub-font", actualFont)
             MPVLib.setPropertyString("secondary-sub-font", actualFont)

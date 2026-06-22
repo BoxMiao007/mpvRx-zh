@@ -850,4 +850,165 @@
   <string name="pref_custom_outro_keywords_summary">Enable user-defined keywords for ending matching instead of default ones</string>
   <string name="pref_custom_outro_keywords_title">Custom ending keywords</string>
   <string name="pref_custom_outro_keywords_dialog_desc">Enter comma-separated keywords for endings/outros</string>
+  <!-- Player Controls - Hardcoded strings -->
+  <string name="player_controls_previous">Previous</string>
+  <string name="player_controls_next">Next</string>
+  <string name="player_controls_play">Play</string>
+  <string name="player_controls_pause">Pause</string>
+  <string name="player_controls_unknown">Unknown</string>
+  <string name="player_controls_normal">Normal</string>
+  <string name="player_controls_charging">Charging</string>
+  <string name="player_controls_discharging">Discharging</string>
+  <string name="player_controls_full">Full</string>
+  <string name="player_controls_chapter">Chapter</string>
+  <string name="player_controls_file">File</string>
+  <string name="player_controls_audio">Audio</string>
+  <string name="player_controls_battery">Battery</string>
+  <string name="player_controls_temp">Temp</string>
+  <string name="player_controls_thermal">Thermal</string>
+  <string name="player_controls_active">Active</string>
+  <string name="player_controls_default">Default</string>
+  <string name="player_controls_none">None</string>
+  <string name="player_controls_cancel">Cancel</string>
+  <string name="player_controls_add">Add</string>
+  <string name="player_controls_remove">Remove</string>
+  <string name="player_controls_save">Save</string>
+  <string name="player_controls_close">Close</string>
+  <string name="player_controls_info">Info</string>
+  <string name="player_controls_download">Download</string>
+  <string name="player_controls_translate">Translate</string>
+  <string name="player_controls_translating">Translating</string>
+  <string name="player_controls_scripts">Scripts</string>
+  <string name="player_controls_settings">Settings</string>
+  <string name="player_controls_console">Console</string>
+  <string name="player_controls_presets">Presets</string>
+  <string name="player_controls_custom">Custom</string>
+  <string name="player_controls_height">Height</string>
+  <string name="player_controls_season">Season</string>
+  <string name="player_controls_episode">Ep</string>
+  <string name="player_controls_collapse">Collapse</string>
+  <string name="player_controls_expand">Expand</string>
+  <string name="player_controls_on">On</string>
+  <string name="player_controls_off">Off</string>
+
+  <!-- Ambient Mode -->
+  <string name="ambient_fast">Fast</string>
+  <string name="ambient_balanced">Balanced</string>
+  <string name="ambient_glow">Glow</string>
+  <string name="ambient_spread">Spread</string>
+  <string name="ambient_color">Color</string>
+  <string name="ambient_saturation">Saturation</string>
+  <string name="ambient_warmth">Warmth</string>
+  <string name="ambient_compositing">Compositing</string>
+  <string name="ambient_opacity">Opacity</string>
+  <string name="ambient_vignette">Vignette</string>
+  <string name="ambient_strength">Strength</string>
+  <string name="ambient_bezel">Bezel</string>
+  <string name="ambient_dither">Dither</string>
+
+  <!-- Aspect Ratio -->
+  <string name="aspect_ratio_presets">Presets</string>
+  <string name="aspect_ratio_custom">Custom</string>
+  <string name="aspect_ratio_height">Height</string>
+
+  <!-- HDR -->
+  <string name="hdr_off">Off</string>
+  <string name="hdr_linear">Linear</string>
+
+  <!-- Animation Styles -->
+  <string name="anim_default">Default</string>
+  <string name="anim_none">None</string>
+  <string name="anim_cinematic">Cinematic</string>
+  <string name="anim_dramatic">Dramatic</string>
+  <string name="anim_nostalgic">Nostalgic</string>
+
+  <!-- yt-dlp -->
+  <string name="ytdlp_any">Any</string>
+  <string name="ytdlp_settings">Settings</string>
+  <string name="ytdlp_console">Console</string>
+  
+  <!-- Browser UI -->
+  <string name="browser_playlists">Playlists</string>
+  <string name="browser_saved">Saved</string>
+  <string name="browser_local">Local</string>
+  <string name="browser_thumbnail">Thumbnail</string>
+  <string name="browser_play">Play</string>
+  <string name="browser_done">Done</string>
+  <string name="browser_create">Create</string>
+  <string name="browser_landscape">Landscape</string>
+  <string name="browser_portrait">Portrait</string>
+  <string name="browser_oldest">Oldest</string>
+  <string name="browser_newest">Newest</string>
+  <string name="browser_smallest">Smallest</string>
+  <string name="browser_largest">Largest</string>
+  <string name="browser_shortest">Shortest</string>
+  <string name="browser_longest">Longest</string>
+  <string name="browser_biggest">Biggest</string>
+  <string name="browser_subtitle">Subtitle</string>
+  
+  <!-- Video Compressor -->
+  <string name="compressor_presets">Presets</string>
+  <string name="compressor_video">Video</string>
+  <string name="compressor_audio">Audio</string>
+  <string name="compressor_title">Compressor</string>
+  
+  <!-- Sort Labels -->
+  <string name="sort_oldest">Oldest</string>
+  <string name="sort_newest">Newest</string>
+  <string name="sort_smallest">Smallest</string>
+  <string name="sort_largest">Largest</string>
+  <string name="sort_shortest">Shortest</string>
+  <string name="sort_longest">Longest</string>
+  <string name="sort_biggest">Biggest</string>
+  
+  <!-- Player Enums -->
+  <string name="enum_auto">Auto</string>
+  <string name="enum_fast">Fast</string>
+  <string name="enum_sw">SW</string>
+  <string name="enum_hw">HW</string>
+  <string name="enum_hw_plus">HW+</string>
+  <string name="enum_high_quality">High Quality</string>
+  <string name="enum_gpu_hq">GPU HQ</string>
+  <string name="enum_low_latency">Low Latency</string>
+  <string name="enum_sw_fast">SW Fast</string>
+  <string name="enum_cinematic">Cinematic</string>
+  <string name="enum_dramatic">Dramatic</string>
+  <string name="enum_nostalgic">Nostalgic</string>
+  <string name="enum_vivid">Vivid</string>
+  <string name="enum_warm_tone">Warm Tone</string>
+  <string name="enum_cool_tone">Cool Tone</string>
+  <string name="enum_soft_pastel">Soft Pastel</string>
+  <string name="enum_night_mode">Night Mode</string>
+  <string name="enum_ghibli_style">Ghibli Style</string>
+  <string name="enum_neon_pop">Neon Pop</string>
+  <string name="enum_deep_black">Deep Black</string>
+  <string name="enum_glow">Glow</string>
+  <string name="enum_frame_extend">Frame Extend</string>
+  <string name="hdr_bt_2100_pq">BT.2100 PQ</string>
+  <string name="hdr_bt_2100_hlg">BT.2100 HLG</string>
+  <string name="hdr_bt_2020">BT.2020</string>
+  <string name="hdr_linear_title">Linear HDR</string>
+  <string name="anim_elastic">Elastic Bounce</string>
+  <string name="anim_cinematic">Cinematic Scale</string>
+  <string name="anim_slide_up">Slide Up</string>
+  <string name="anim_minimal">Minimal Fade</string>
+  <string name="anim_fade_dark">Fade from Black</string>
+  <string name="anim_zoom_burst">Zoom Burst</string>
+  <string name="anim_cinema_bars">Cinema Bars</string>
+  <string name="anim_elastic_slide">Elastic Slide</string>
+  <string name="anim_depth_zoom">Depth Zoom</string>
+  <string name="anim_flip_fade">Flip Fade</string>
+  
+  <!-- Media Playback -->
+  <string name="media_play">Play</string>
+  <string name="media_pause">Pause</string>
+  <string name="media_resuming">Resuming</string>
+  
+  <!-- Misc -->
+  <string name="misc_subtitles">Subtitles</string>
+  <string name="misc_decoder">Decoder</string>
+  <string name="misc_shuffle">Shuffle</string>
+  <string name="misc_count">Count</string>
+  <string name="misc_english">English</string>
+  <string name="misc_unknown">Unknown</string>
 </resources>

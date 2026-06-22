@@ -186,7 +186,7 @@ fun SubtitlesSheet(
           showLanguagePicker = null
           langSearch = ""
         }) {
-          Text("Cancel")
+          Text(stringResource(R.string.player_controls_cancel))
         }
       }
     )
@@ -225,7 +225,7 @@ fun SubtitlesSheet(
             modifier = Modifier.fillMaxWidth(),
           ) {
             Text(
-              "${translationStatus.ifBlank { "Translating" }} ${translatingTrackName}... ${(translationProgress * 100).toInt()}%",
+              "${translationStatus.ifBlank { stringResource(R.string.player_controls_translating) }} ${translatingTrackName}... ${(translationProgress * 100).toInt()}%",
               style = MaterialTheme.typography.bodySmall,
               color = MaterialTheme.colorScheme.primary,
               modifier = Modifier.weight(1f),
@@ -360,7 +360,7 @@ fun SubtitleTrackRow(
     
     if (isExternal) {
       if (translationEnabled) {
-        IconButton(onClick = onTranslate) { Icon(Icons.Default.Translate, contentDescription = "Translate") }
+        IconButton(onClick = onTranslate) { Icon(Icons.Default.Translate, contentDescription = stringResource(R.string.player_controls_translate)) }
       }
       IconButton(onClick = onRemove) { Icon(Icons.Default.Delete, contentDescription = null) }
     }

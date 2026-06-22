@@ -1144,7 +1144,7 @@ fun PlayerControls(
                   ) {
                     Icon(
                       imageVector = Icons.Default.SkipPrevious,
-                      contentDescription = "Previous",
+                      contentDescription = stringResource(R.string.player_controls_previous),
                       tint =
                         if (viewModel.hasPrevious()) {
                           if (hideBackground) controlColor else MaterialTheme.colorScheme.onSurface
@@ -1241,7 +1241,7 @@ fun PlayerControls(
                   ) {
                     Icon(
                       imageVector = Icons.Default.SkipNext,
-                      contentDescription = "Next",
+                      contentDescription = stringResource(R.string.player_controls_next),
                       tint =
                         if (viewModel.hasNext()) {
                           if (hideBackground) controlColor else MaterialTheme.colorScheme.onSurface
@@ -1752,13 +1752,13 @@ private fun CustomStatsPageSixOverlay(
         cpuPercent = 0f,
         gpuEstimatePercent = 0f,
         batteryPercentText = "--%",
-        batteryRateText = "Unknown",
+        batteryRateText = stringResource(R.string.player_controls_unknown),
         batteryWattsText = "-- W",
         batteryTempText = "--°C",
         hdrActive = "--",
         sessionPlayTimeText = "00:00:00",
-        decoderEfficiencyText = "Unknown",
-        thermalStateText = "Normal",
+        decoderEfficiencyText = stringResource(R.string.player_controls_unknown),
+        thermalStateText = stringResource(R.string.player_controls_normal),
         peakTempText = "--°C",
         tempRiseText = "+0.0°C",
       ),
@@ -1830,14 +1830,14 @@ private fun CustomStatsPageSixOverlay(
         0
       }
       val thermalStateText = when (thermalStatus) {
-        0 -> "Normal"
+        0 -> context.getString(R.string.player_controls_normal)
         1 -> "Light Throttling"
         2 -> "Moderate Throttling"
         3 -> "Severe Throttling"
         4 -> "Critical Throttling"
         5 -> "Emergency!"
         6 -> "Overheating Shutdown!"
-        else -> "Normal"
+        else -> context.getString(R.string.player_controls_normal)
       }
 
       val currentHwdec = runCatching { MPVLib.getPropertyString("hwdec-current") ?: "no" }.getOrDefault("no")
@@ -1876,7 +1876,7 @@ private fun CustomStatsPageSixOverlay(
           }
 
           "$sourceLabel | $outputLabel"
-        }.getOrDefault("Unknown"),
+        }.getOrDefault(context.getString(R.string.player_controls_unknown)),
         sessionPlayTimeText = sessionPlayTimeText,
         decoderEfficiencyText = decoderEfficiencyText,
         thermalStateText  = thermalStateText,
@@ -1918,13 +1918,13 @@ private fun CustomStatsPageSixOverlay(
     OutlinedText("--- PLAYBACK & DECODER ---", style = headerStyle)
     OutlinedLabeled("File", stats.fileName, labelStyle, valueStyle)
     OutlinedLabeled("Decoder & VO", "${stats.renderContext} | ${stats.video} | Eff: ${stats.decoderEfficiencyText}", labelStyle, valueStyle)
-    OutlinedLabeled("Audio", "${stats.audio} | HDR: ${stats.hdrActive}", labelStyle, valueStyle)
+    OutlinedLabeled(stringResource(R.string.player_controls_audio), "${stats.audio} | HDR: ${stats.hdrActive}", labelStyle, valueStyle)
 
     Spacer(modifier = Modifier.height(2.dp))
     OutlinedText("--- POWER & THERMALS ---", style = headerStyle)
-    OutlinedLabeled("Battery", "${stats.batteryPercentText} | ${stats.batteryWattsText} | Rate: ${stats.batteryRateText}", labelStyle, valueStyle)
-    OutlinedLabeled("Temp", "${stats.batteryTempText} (Peak: ${stats.peakTempText} | Rise: ${stats.tempRiseText})", labelStyle, valueStyle)
-    OutlinedLabeled("Thermal", stats.thermalStateText, labelStyle, valueStyle)
+    OutlinedLabeled(stringResource(R.string.player_controls_battery), "${stats.batteryPercentText} | ${stats.batteryWattsText} | Rate: ${stats.batteryRateText}", labelStyle, valueStyle)
+    OutlinedLabeled(stringResource(R.string.player_controls_temp), "${stats.batteryTempText} (Peak: ${stats.peakTempText} | Rise: ${stats.tempRiseText})", labelStyle, valueStyle)
+    OutlinedLabeled(stringResource(R.string.player_controls_thermal), stats.thermalStateText, labelStyle, valueStyle)
 
     Spacer(modifier = Modifier.height(2.dp))
     OutlinedText("--- SESSION ---", style = headerStyle)

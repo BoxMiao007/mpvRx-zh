@@ -101,7 +101,7 @@ fun VideoSettingsFilterPresetsCard(modifier: Modifier = Modifier) {
               MPVLib.setPropertyInt("hue", preset.hue)
               MPVLib.setPropertyInt("sharpen", preset.sharpness)
             },
-            label = { Text(preset.displayName) },
+            label = { Text(stringResource(preset.displayNameRes)) },
             leadingIcon = null,
           )
         }

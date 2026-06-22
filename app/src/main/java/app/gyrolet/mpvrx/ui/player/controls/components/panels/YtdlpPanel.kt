@@ -25,6 +25,8 @@ import app.gyrolet.mpvrx.preferences.YtdlPreferences
 import app.gyrolet.mpvrx.preferences.preference.collectAsState
 import app.gyrolet.mpvrx.ui.icons.Icon
 import app.gyrolet.mpvrx.ui.icons.Icons
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import app.gyrolet.mpvrx.ui.player.controls.panelCardsColors
 import app.gyrolet.mpvrx.ui.player.ytdlp.YtdlCodecPreference
 import app.gyrolet.mpvrx.ui.player.ytdlp.YtdlpManager
@@ -65,7 +67,7 @@ fun YtdlpPanel(
   }
 
   val qualityLabel = remember(ytdlQuality) {
-    if (ytdlQuality == -1) "Any" else "${ytdlQuality}p"
+    if (ytdlQuality == -1) context.getString(R.string.ytdlp_any) else "${ytdlQuality}p"
   }
 
   DraggablePanel(
@@ -100,7 +102,7 @@ fun YtdlpPanel(
           Tab(
             selected = selectedTab == 0,
             onClick = { selectedTab = 0 },
-            text = { Text("Settings", fontWeight = FontWeight.SemiBold) }
+            text = { Text(stringResource(R.string.ytdlp_settings), fontWeight = FontWeight.SemiBold) }
           )
           Tab(
             selected = selectedTab == 1,
@@ -110,7 +112,7 @@ fun YtdlpPanel(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(6.dp)
               ) {
-                Text("Console", fontWeight = FontWeight.SemiBold)
+                Text(stringResource(R.string.ytdlp_console), fontWeight = FontWeight.SemiBold)
                 if (isRunning) {
                   Box(
                     modifier = Modifier

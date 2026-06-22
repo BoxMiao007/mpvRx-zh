@@ -182,9 +182,9 @@ fun MoreSheet(
               Text(
                 text =
                   if (selectedLuaScripts.isEmpty()) {
-                    "Scripts"
+                    stringResource(R.string.player_controls_scripts)
                   } else {
-                    "Scripts (${selectedLuaScripts.size})"
+                    "${stringResource(R.string.player_controls_scripts)} (${selectedLuaScripts.size})"
                   },
                 color =
                   if (enableLuaScripts && selectedLuaScripts.isNotEmpty()) {
@@ -473,7 +473,7 @@ fun SectionHeaderWithInfo(
     IconButton(onClick = onInfoClick, modifier = Modifier.size(24.dp)) {
       Icon(
         imageVector = Icons.Outlined.Info,
-        contentDescription = "Info",
+        contentDescription = stringResource(R.string.player_controls_info),
         tint = MaterialTheme.colorScheme.primary,
         modifier = Modifier.size(16.dp)
       )

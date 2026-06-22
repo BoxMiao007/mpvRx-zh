@@ -643,4 +643,165 @@
   <string name="pref_custom_outro_keywords_summary">启用用户自定义的片尾匹配关键词代替默认关键词</string>
   <string name="pref_custom_outro_keywords_title">自定义片尾关键词</string>
   <string name="pref_custom_outro_keywords_dialog_desc">输入片尾/结尾的逗号分隔关键词</string>
+  <!-- 播放器控件 - 硬编码字符串 -->
+  <string name="player_controls_previous">上一个</string>
+  <string name="player_controls_next">下一个</string>
+  <string name="player_controls_play">播放</string>
+  <string name="player_controls_pause">暂停</string>
+  <string name="player_controls_unknown">未知</string>
+  <string name="player_controls_normal">正常</string>
+  <string name="player_controls_charging">充电中</string>
+  <string name="player_controls_discharging">放电中</string>
+  <string name="player_controls_full">已满</string>
+  <string name="player_controls_chapter">章节</string>
+  <string name="player_controls_file">文件</string>
+  <string name="player_controls_audio">音频</string>
+  <string name="player_controls_battery">电池</string>
+  <string name="player_controls_temp">温度</string>
+  <string name="player_controls_thermal">散热</string>
+  <string name="player_controls_active">活跃</string>
+  <string name="player_controls_default">默认</string>
+  <string name="player_controls_none">无</string>
+  <string name="player_controls_cancel">取消</string>
+  <string name="player_controls_add">添加</string>
+  <string name="player_controls_remove">移除</string>
+  <string name="player_controls_save">保存</string>
+  <string name="player_controls_close">关闭</string>
+  <string name="player_controls_info">信息</string>
+  <string name="player_controls_download">下载</string>
+  <string name="player_controls_translate">翻译</string>
+  <string name="player_controls_translating">翻译中</string>
+  <string name="player_controls_scripts">脚本</string>
+  <string name="player_controls_settings">设置</string>
+  <string name="player_controls_console">控制台</string>
+  <string name="player_controls_presets">预设</string>
+  <string name="player_controls_custom">自定义</string>
+  <string name="player_controls_height">高度</string>
+  <string name="player_controls_season">季</string>
+  <string name="player_controls_episode">集</string>
+  <string name="player_controls_collapse">收起</string>
+  <string name="player_controls_expand">展开</string>
+  <string name="player_controls_on">开</string>
+  <string name="player_controls_off">关</string>
+
+  <!-- 氛围模式 -->
+  <string name="ambient_fast">快速</string>
+  <string name="ambient_balanced">均衡</string>
+  <string name="ambient_glow">发光</string>
+  <string name="ambient_spread">扩散</string>
+  <string name="ambient_color">颜色</string>
+  <string name="ambient_saturation">饱和度</string>
+  <string name="ambient_warmth">色温</string>
+  <string name="ambient_compositing">合成</string>
+  <string name="ambient_opacity">不透明度</string>
+  <string name="ambient_vignette">暗角</string>
+  <string name="ambient_strength">强度</string>
+  <string name="ambient_bezel">边框</string>
+  <string name="ambient_dither">抖动</string>
+
+  <!-- 宽高比 -->
+  <string name="aspect_ratio_presets">预设</string>
+  <string name="aspect_ratio_custom">自定义</string>
+  <string name="aspect_ratio_height">高度</string>
+
+  <!-- HDR -->
+  <string name="hdr_off">关闭</string>
+  <string name="hdr_linear">线性</string>
+
+  <!-- 动画样式 -->
+  <string name="anim_default">默认</string>
+  <string name="anim_none">无</string>
+  <string name="anim_cinematic">电影感</string>
+  <string name="anim_dramatic">戏剧感</string>
+  <string name="anim_nostalgic">怀旧感</string>
+
+  <!-- yt-dlp -->
+  <string name="ytdlp_any">任意</string>
+  <string name="ytdlp_settings">设置</string>
+  <string name="ytdlp_console">控制台</string>
+  
+  <!-- 浏览器 UI -->
+  <string name="browser_playlists">播放列表</string>
+  <string name="browser_saved">已保存</string>
+  <string name="browser_local">本地</string>
+  <string name="browser_thumbnail">缩略图</string>
+  <string name="browser_play">播放</string>
+  <string name="browser_done">完成</string>
+  <string name="browser_create">创建</string>
+  <string name="browser_landscape">横屏</string>
+  <string name="browser_portrait">竖屏</string>
+  <string name="browser_oldest">最早</string>
+  <string name="browser_newest">最新</string>
+  <string name="browser_smallest">最小</string>
+  <string name="browser_largest">最大</string>
+  <string name="browser_shortest">最短</string>
+  <string name="browser_longest">最长</string>
+  <string name="browser_biggest">最大</string>
+  <string name="browser_subtitle">字幕</string>
+  
+  <!-- 视频压缩 -->
+  <string name="compressor_presets">预设</string>
+  <string name="compressor_video">视频</string>
+  <string name="compressor_audio">音频</string>
+  <string name="compressor_title">压缩器</string>
+  
+  <!-- 排序标签 -->
+  <string name="sort_oldest">最早</string>
+  <string name="sort_newest">最新</string>
+  <string name="sort_smallest">最小</string>
+  <string name="sort_largest">最大</string>
+  <string name="sort_shortest">最短</string>
+  <string name="sort_longest">最长</string>
+  <string name="sort_biggest">最大</string>
+  
+  <!-- 播放器枚举 -->
+  <string name="enum_auto">自动</string>
+  <string name="enum_fast">快速</string>
+  <string name="enum_sw">软解</string>
+  <string name="enum_hw">硬解</string>
+  <string name="enum_hw_plus">硬解+</string>
+  <string name="enum_high_quality">高质量</string>
+  <string name="enum_gpu_hq">GPU 高质量</string>
+  <string name="enum_low_latency">低延迟</string>
+  <string name="enum_sw_fast">软解快速</string>
+  <string name="enum_cinematic">电影感</string>
+  <string name="enum_dramatic">戏剧感</string>
+  <string name="enum_nostalgic">怀旧感</string>
+  <string name="enum_vivid">鲜艳</string>
+  <string name="enum_warm_tone">暖色调</string>
+  <string name="enum_cool_tone">冷色调</string>
+  <string name="enum_soft_pastel">柔和粉彩</string>
+  <string name="enum_night_mode">夜间模式</string>
+  <string name="enum_ghibli_style">吉卜力风格</string>
+  <string name="enum_neon_pop">霓虹流行</string>
+  <string name="enum_deep_black">深黑</string>
+  <string name="enum_glow">发光</string>
+  <string name="enum_frame_extend">帧扩展</string>
+  <string name="hdr_bt_2100_pq">BT.2100 PQ</string>
+  <string name="hdr_bt_2100_hlg">BT.2100 HLG</string>
+  <string name="hdr_bt_2020">BT.2020</string>
+  <string name="hdr_linear_title">线性 HDR</string>
+  <string name="anim_elastic">弹性跳动</string>
+  <string name="anim_cinematic">电影缩放</string>
+  <string name="anim_slide_up">上滑</string>
+  <string name="anim_minimal">简约淡入</string>
+  <string name="anim_fade_dark">黑屏淡入</string>
+  <string name="anim_zoom_burst">缩放爆发</string>
+  <string name="anim_cinema_bars">影院遮幅</string>
+  <string name="anim_elastic_slide">弹性滑动</string>
+  <string name="anim_depth_zoom">深度缩放</string>
+  <string name="anim_flip_fade">翻转淡入</string>
+  
+  <!-- 媒体播放 -->
+  <string name="media_play">播放</string>
+  <string name="media_pause">暂停</string>
+  <string name="media_resuming">恢复中</string>
+  
+  <!-- 其他 -->
+  <string name="misc_subtitles">字幕</string>
+  <string name="misc_decoder">解码器</string>
+  <string name="misc_shuffle">随机播放</string>
+  <string name="misc_count">数量</string>
+  <string name="misc_english">英文</string>
+  <string name="misc_unknown">未知</string>
 </resources>

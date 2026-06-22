@@ -45,6 +45,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import app.gyrolet.mpvrx.presentation.Screen
 import app.gyrolet.mpvrx.ui.browser.folderlist.FolderListScreen
 import app.gyrolet.mpvrx.ui.browser.networkstreaming.NetworkStreamingScreen
@@ -186,7 +188,7 @@ object MainScreen : Screen {
                     when (tab) {
                       MainTab.HOME -> "Home"
                       MainTab.RECENTS -> "Recents"
-                      MainTab.PLAYLISTS -> "Playlists"
+                      MainTab.PLAYLISTS -> stringResource(R.string.browser_playlists)
                       MainTab.NETWORK -> "Network"
                     }
                   )

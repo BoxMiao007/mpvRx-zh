@@ -537,7 +537,7 @@ fun OnlineSubtitleRow(
             ) {
                 Icon(
                     imageVector = Icons.Default.Download,
-                    contentDescription = "Download",
+                    contentDescription = stringResource(R.string.player_controls_download),
                     tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(20.dp)
                 )
@@ -805,7 +805,7 @@ private fun SeriesSelectionControls(
                 shape = RoundedCornerShape(10.dp),
             ) {
                 Text(
-                    text = selectedSeason?.let { "S${it.season_number}" } ?: "Season",
+                    text = selectedSeason?.let { "S${it.season_number}" } ?: stringResource(R.string.player_controls_season),
                     style = MaterialTheme.typography.labelLarge,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,
@@ -854,7 +854,7 @@ private fun SeriesSelectionControls(
                     Spacer(Modifier.width(6.dp))
                 }
                 Text(
-                    text = selectedEpisode?.let { "E${it.episode_number}" } ?: "Ep",
+                    text = selectedEpisode?.let { "E${it.episode_number}" } ?: stringResource(R.string.player_controls_episode),
                     style = MaterialTheme.typography.labelLarge,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,

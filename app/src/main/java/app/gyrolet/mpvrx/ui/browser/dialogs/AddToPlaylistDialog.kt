@@ -40,6 +40,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -191,7 +193,7 @@ fun AddToPlaylistDialog(
         ),
         shape = MaterialTheme.shapes.extraLarge,
       ) {
-        Text("Done", fontWeight = FontWeight.Bold)
+        Text(stringResource(R.string.browser_done), fontWeight = FontWeight.Bold)
       }
     },
     dismissButton = {
@@ -199,7 +201,7 @@ fun AddToPlaylistDialog(
         onClick = onDismiss,
         shape = MaterialTheme.shapes.extraLarge,
       ) {
-        Text("Cancel", fontWeight = FontWeight.Medium)
+        Text(stringResource(R.string.player_controls_cancel), fontWeight = FontWeight.Medium)
       }
     },
     containerColor = MaterialTheme.colorScheme.surface,
@@ -333,7 +335,7 @@ private fun CreatePlaylistDialog(
         enabled = playlistName.isNotBlank(),
         shape = MaterialTheme.shapes.extraLarge,
       ) {
-        Text("Create", fontWeight = FontWeight.Bold)
+        Text(stringResource(R.string.browser_create), fontWeight = FontWeight.Bold)
       }
     },
     dismissButton = {
@@ -341,7 +343,7 @@ private fun CreatePlaylistDialog(
         onClick = onDismiss,
         shape = MaterialTheme.shapes.extraLarge,
       ) {
-        Text("Cancel", fontWeight = FontWeight.Medium)
+        Text(stringResource(R.string.player_controls_cancel), fontWeight = FontWeight.Medium)
       }
     },
     containerColor = MaterialTheme.colorScheme.surface,

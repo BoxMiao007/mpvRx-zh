@@ -62,6 +62,7 @@ import app.gyrolet.mpvrx.ui.player.PlayerViewModel
 import app.gyrolet.mpvrx.ui.player.Sheets
 import app.gyrolet.mpvrx.ui.player.VideoAspect
 import app.gyrolet.mpvrx.ui.player.controls.components.ControlsButton
+import app.gyrolet.mpvrx.R
 import app.gyrolet.mpvrx.ui.player.controls.components.CurrentChapter
 import app.gyrolet.mpvrx.ui.theme.controlColor
 import app.gyrolet.mpvrx.ui.theme.spacing
@@ -288,7 +289,7 @@ fun RenderPlayerButton(
               ),
         ) {
           Text(
-            text = decoder.title,
+            text = stringResource(decoder.titleRes),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             style = MaterialTheme.typography.bodyMedium,
@@ -964,21 +965,21 @@ internal fun readBatterySnapshot(context: Context): BatterySnapshot {
     ?: BatteryManager.BATTERY_STATUS_UNKNOWN
   val statusText =
     when (status) {
-      BatteryManager.BATTERY_STATUS_CHARGING -> "Charging"
-      BatteryManager.BATTERY_STATUS_DISCHARGING -> "Discharging"
-      BatteryManager.BATTERY_STATUS_FULL -> "Full"
+      BatteryManager.BATTERY_STATUS_CHARGING -> context.getString(R.string.player_controls_charging)
+      BatteryManager.BATTERY_STATUS_DISCHARGING -> context.getString(R.string.player_controls_discharging)
+      BatteryManager.BATTERY_STATUS_FULL -> context.getString(R.string.player_controls_full)
       BatteryManager.BATTERY_STATUS_NOT_CHARGING -> "Not charging"
       else ->
         when {
-          (currentMicroAmps ?: 0L) > 0L -> "Charging"
-          (currentMicroAmps ?: 0L) < 0L -> "Discharging"
-          else -> "Unknown"
+          (currentMicroAmps ?: 0L) > 0L -> context.getString(R.string.player_controls_charging)
+          (currentMicroAmps ?: 0L) < 0L -> context.getString(R.string.player_controls_discharging)
+          else -> context.getString(R.string.player_controls_unknown)
         }
     }
 
   val currentMilliAmps = currentMicroAmps?.let { abs(it).toFloat() / 1000f }?.takeIf { it > 0f }
   val rateText =
-    if (currentMilliAmps != null && statusText != "Full" && statusText != "Unknown") {
+    if (currentMilliAmps != null && statusText != context.getString(R.string.player_controls_full) && statusText != context.getString(R.string.player_controls_unknown)) {
       val formattedCurrent =
         if (currentMilliAmps >= 100f) {
           String.format("%.0f mA", currentMilliAmps)

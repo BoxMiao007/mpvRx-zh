@@ -40,6 +40,8 @@ import app.gyrolet.mpvrx.presentation.components.PlayerSheet
 import app.gyrolet.mpvrx.presentation.components.SliderItem
 import app.gyrolet.mpvrx.ui.icons.Icon as AppSymbolIcon
 import app.gyrolet.mpvrx.ui.icons.Icons
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import app.gyrolet.mpvrx.ui.player.AmbientShaderPresets
 import app.gyrolet.mpvrx.ui.player.AmbientVisualMode
 import app.gyrolet.mpvrx.ui.player.PlayerViewModel
@@ -182,12 +184,12 @@ fun AmbientSheet(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 ExpressivePresetButton(
-                    label = "Fast",
+                    label = stringResource(R.string.ambient_fast),
                     selected = isFast,
                     onClick = { viewModel.applyAmbientProfileFast() },
                 )
                 ExpressivePresetButton(
-                    label = "Balanced",
+                    label = stringResource(R.string.ambient_balanced),
                     selected = isBalanced,
                     onClick = { viewModel.applyAmbientProfileBalanced() },
                 )
@@ -206,7 +208,7 @@ fun AmbientSheet(
             // ── Section: Glow ────────────────────────────────────────────────
             var glowExpanded by remember { mutableStateOf(true) }
             SectionHeader(
-                title = "Glow",
+                title = stringResource(R.string.ambient_glow),
                 isExpanded = glowExpanded,
                 onClick = { glowExpanded = !glowExpanded },
             )
@@ -236,7 +238,7 @@ fun AmbientSheet(
                     )
 
                     SliderItem(
-                        label = "Spread",
+                        label = stringResource(R.string.ambient_spread),
                         valueText = "%.2f".format(maxRadius),
                         value = maxRadius,
                         onChange = { viewModel.updateAmbientParams(maxRadius = it) },
@@ -312,7 +314,7 @@ fun AmbientSheet(
                     verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
                 ) {
                     SliderItem(
-                        label = "Saturation",
+                        label = stringResource(R.string.ambient_saturation),
                         valueText = "%.1f".format(satBoost),
                         value = satBoost,
                         onChange = { viewModel.updateAmbientParams(satBoost = it) },
@@ -330,7 +332,7 @@ fun AmbientSheet(
                     )
 
                     SliderItem(
-                        label = "Warmth",
+                        label = stringResource(R.string.ambient_warmth),
                         valueText = if (warmth == 0f) "0" else "%.2f".format(warmth),
                         value = warmth,
                         onChange = { viewModel.updateAmbientParams(warmth = it) },
@@ -357,7 +359,7 @@ fun AmbientSheet(
             // ── Section: Compositing ─────────────────────────────────────────
             var compositingExpanded by remember { mutableStateOf(true) }
             SectionHeader(
-                title = "Compositing",
+                title = stringResource(R.string.ambient_compositing),
                 isExpanded = compositingExpanded,
                 onClick = { compositingExpanded = !compositingExpanded },
             )
@@ -370,7 +372,7 @@ fun AmbientSheet(
                     verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
                 ) {
                     SliderItem(
-                        label = "Opacity",
+                        label = stringResource(R.string.ambient_opacity),
                         valueText = "%.2f".format(opacity),
                         value = opacity,
                         onChange = { viewModel.updateAmbientParams(opacity = it) },
@@ -388,7 +390,7 @@ fun AmbientSheet(
                     )
 
                     SliderItem(
-                        label = "Vignette",
+                        label = stringResource(R.string.ambient_vignette),
                         valueText = "%.1f".format(vignetteStrength),
                         value = vignetteStrength,
                         onChange = { viewModel.updateAmbientParams(vignetteStrength = it) },
@@ -454,7 +456,7 @@ fun AmbientSheet(
                         verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
                     ) {
                         SliderItem(
-                            label = "Strength",
+                            label = stringResource(R.string.ambient_strength),
                             valueText = "%.2f".format(frameExtendStrength),
                             value = frameExtendStrength,
                             onChange = { viewModel.updateFrameExtendParams(extendStrength = it) },
@@ -508,7 +510,7 @@ fun AmbientSheet(
                         )
 
                         SliderItem(
-                            label = "Bezel",
+                            label = stringResource(R.string.ambient_bezel),
                             valueText = "%.3f".format(bezelDepth),
                             value = bezelDepth,
                             onChange = { viewModel.updateAmbientParams(bezelDepth = it) },
@@ -526,7 +528,7 @@ fun AmbientSheet(
                         )
 
                         SliderItem(
-                            label = "Dither",
+                            label = stringResource(R.string.ambient_dither),
                             valueText = "%.3f".format(ditherNoise),
                             value = ditherNoise,
                             onChange = { viewModel.updateFrameExtendParams(ditherNoise = it) },

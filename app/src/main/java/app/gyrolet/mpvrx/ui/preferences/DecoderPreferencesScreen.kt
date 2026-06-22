@@ -116,7 +116,7 @@ object DecoderPreferencesScreen : Screen {
                 title = { Text(stringResource(R.string.pref_decoder_profile_title)) },
                 summary = {
                   Text(
-                    currentProfile.displayName,
+                    stringResource(currentProfile.displayNameRes),
                     color = MaterialTheme.colorScheme.outline,
                   )
                 },

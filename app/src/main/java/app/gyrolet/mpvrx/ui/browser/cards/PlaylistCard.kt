@@ -53,7 +53,7 @@ fun PlaylistCard(
 
   // Create a custom chip renderer for playlist type
   val customChipRenderer: @Composable () -> Unit = {
-    val chipText = if (playlist.isM3uPlaylist) stringResource(R.string.playlist_m3u_badge) else "Local"
+    val chipText = if (playlist.isM3uPlaylist) stringResource(R.string.playlist_m3u_badge) else stringResource(R.string.browser_local)
 
     // Use Material Design theme colors
     val materialTheme = androidx.compose.material3.MaterialTheme.colorScheme

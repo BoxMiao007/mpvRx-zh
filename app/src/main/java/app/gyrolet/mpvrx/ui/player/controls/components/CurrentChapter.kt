@@ -2,6 +2,8 @@ package app.gyrolet.mpvrx.ui.player.controls.components
 
 import app.gyrolet.mpvrx.ui.icons.Icon
 import app.gyrolet.mpvrx.ui.icons.Icons
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.SizeTransform
@@ -86,7 +88,7 @@ fun CurrentChapter(
           SizeTransform(clip = false),
         )
       },
-      label = "Chapter",
+      label = stringResource(R.string.player_controls_chapter),
     ) { currentChapter ->
       Row(
         verticalAlignment = Alignment.CenterVertically,
