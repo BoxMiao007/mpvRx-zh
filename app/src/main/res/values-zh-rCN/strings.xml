@@ -1,0 +1,646 @@
+<resources>
+  <string name="app_name" translatable="false">MpvRx</string>
+  <string name="generic_reset">重置</string>
+  <string name="generic_share">分享</string>
+  <string name="generic_confirm">确认</string>
+  <string name="generic_cancel">取消</string>
+  <string name="generic_ok">确定</string>
+  <string name="generic_unit_ms">毫秒</string>
+  <string name="generic_disabled">已禁用</string>
+  <string name="pref_preferences">偏好设置</string>
+  <string name="pref_appearance_title">外观</string>
+  <string name="pref_appearance_summary">深色模式、Material You</string>
+  <string name="pref_appearance_category_theme">主题</string>
+  <string name="pref_appearance_darkmode_system">跟随系统</string>
+  <string name="pref_appearance_darkmode_light">浅色</string>
+  <string name="pref_appearance_darkmode_dark">深色</string>
+  <string name="pref_appearance_amoled_mode_title">AMOLED 纯黑模式</string>
+  <string name="pref_appearance_amoled_mode_summary">深色主题使用纯黑背景</string>
+  <string name="pref_appearance_system_font_title">使用系统字体</string>
+  <string name="pref_appearance_system_font_summary">在整个应用中使用 Android 系统字体，而非 Google Sans Flex</string>
+  <string name="pref_appearance_material_you_title">Material You</string>
+  <string name="pref_appearance_material_you_summary">启用动态取色</string>
+  <string name="pref_appearance_material_you_summary_disabled">仅在 Android 12 及以上版本可用</string>
+  <string name="pref_appearance_unlimited_name_lines_title">显示完整名称</string>
+  <string name="pref_appearance_unlimited_name_lines_summary">不截断文件夹和视频名称</string>
+  <string name="pref_appearance_hide_player_buttons_background_title">隐藏播放器按钮背景</string>
+  <string name="pref_appearance_hide_player_buttons_background_summary">隐藏所有播放器控制按钮的背景</string>
+  <string name="pref_appearance_category_file_browser">文件浏览器</string>
+  <string name="pref_appearance_category_thumbnails">缩略图</string>
+  <string name="pref_appearance_show_unplayed_old_video_label_title">显示未播放新视频标签</string>
+  <string name="pref_appearance_show_unplayed_old_video_label_summary">在指定天数内添加且从未播放过的视频上显示"新"标签</string>
+  <string name="pref_appearance_unplayed_old_video_days_title">新视频标签天数阈值</string>
+  <string name="pref_appearance_unplayed_old_video_days_summary">最近 %d 天内添加且无播放记录的视频将被标记为新</string>
+  <string name="pref_appearance_show_video_thumbnails_title">显示视频缩略图</string>
+  <string name="pref_appearance_show_video_thumbnails_summary">在视频列表和文件夹中显示生成的缩略图</string>
+  <string name="pref_appearance_thumbnail_generation_title">缩略图生成策略</string>
+  <string name="pref_appearance_thumbnail_generation_summary">选择缩略图的生成方式，包括嵌入封面或特定帧位置</string>
+  <string name="pref_appearance_thumbnail_generation_change_title">更改缩略图策略？</string>
+  <string name="pref_appearance_thumbnail_generation_change_summary">这将清除已缓存的缩略图。浏览时会按新策略重新生成。</string>
+  <string name="pref_appearance_thumbnail_position_title">缩略图帧位置</string>
+  <string name="pref_appearance_thumbnail_position_summary">截取视频 %1$d%% 位置的帧</string>
+  <string name="pref_appearance_show_network_thumbnails_title">显示网络缩略图（实验性）</string>
+  <string name="pref_appearance_show_network_thumbnails_summary">为网络流生成缩略图（可能增加移动网络流量）</string>
+  <string name="pref_appearance_category_navigation">导航</string>
+  <string name="pref_nav_home_title">显示首页标签</string>
+  <string name="pref_nav_home_summary">在底部导航栏中显示或隐藏首页</string>
+  <string name="pref_nav_recents_title">显示最近标签</string>
+  <string name="pref_nav_recents_summary">在底部导航栏中显示或隐藏最近</string>
+  <string name="pref_nav_playlists_title">显示播放列表标签</string>
+  <string name="pref_nav_playlists_summary">在底部导航栏中显示或隐藏播放列表</string>
+  <string name="pref_nav_network_title">显示网络标签</string>
+  <string name="pref_nav_network_summary">在底部导航栏中显示或隐藏网络</string>
+  <string name="pref_appearance_nav_style_slide">滑动</string>
+  <string name="pref_appearance_nav_style_fade">淡入淡出</string>
+  <string name="pref_appearance_nav_style_none">无（即时）</string>
+  <string name="pref_appearance_theme_picker_label">应用主题</string>
+  <string name="pref_appearance_auto_scroll_title">自动滚动到上次播放位置</string>
+  <string name="pref_appearance_auto_scroll_summary">打开视频列表时自动滚动到上次播放的视频</string>
+  <string name="pref_appearance_watched_threshold_title">已看完阈值</string>
+  <string name="pref_appearance_watched_threshold_summary">播放进度达到 %d%% 时标记为已看</string>
+  <string name="video_label_new">新</string>
+  <!-- Theme names -->
+  <string name="theme_default">默认</string>
+  <string name="theme_dynamic">动态</string>
+  <string name="theme_cloudflare">Cloudflare</string>
+  <string name="theme_cotton_candy">棉花糖</string>
+  <string name="theme_doom">毁灭</string>
+  <string name="theme_green_apple">青苹果</string>
+  <string name="theme_lavender">薰衣草</string>
+  <string name="theme_midnight">午夜</string>
+  <string name="theme_mocha">摩卡</string>
+  <string name="theme_strawberry">草莓</string>
+  <string name="theme_tidal">潮汐</string>
+  <string name="theme_nord">Nord</string>
+  <string name="theme_tako_green">Tako</string>
+  <string name="theme_yin_yang">阴阳</string>
+  <string name="theme_yotsuba">四叶</string>
+  <string name="theme_sapphire">蓝宝石</string>
+  <string name="theme_sunset">日落</string>
+  <string name="theme_ocean">海洋</string>
+  <string name="theme_forest">森林</string>
+  <string name="theme_rose_gold">玫瑰金</string>
+  <string name="theme_violet">紫罗兰</string>
+  <string name="theme_amber">琥珀</string>
+  <string name="theme_coral">珊瑚</string>
+  <string name="theme_slate">石板</string>
+  <string name="theme_dracula">德古拉</string>
+  <string name="theme_monochrome">单色</string>
+  <string name="theme_catppuccin">Catppuccin</string>
+  <string name="theme_gruvbox">Gruvbox</string>
+  <string name="theme_tokyo_night">东京之夜</string>
+  <string name="theme_kanagawa">神奈川</string>
+  <string name="theme_rose_pine">Rosé Pine</string>
+  <!-- Settings Search -->
+  <string name="settings_search_hint">搜索设置…</string>
+  <string name="settings_search_no_results">未找到设置</string>
+  <string name="settings_search_title">搜索</string>
+  <!-- Player Preferences Hardcoded -->
+  <string name="pref_autoplay_title">启用上一个/下一个导航</string>
+  <string name="pref_autoplay_summary">为文件夹中的所有视频显示上一个/下一个按钮</string>
+  <string name="pref_autoplay_next_video_title">自动播放下一个视频</string>
+  <string name="pref_autoplay_next_video_summary">当前视频结束时自动播放下一个</string>
+  <string name="pref_autoplay_next_video_summary_disabled">当前视频结束时停留在当前画面</string>
+  <string name="pref_auto_pip_title">自动画中画</string>
+  <string name="pref_auto_pip_summary">按主页或返回键时自动进入画中画模式</string>
+  <string name="pref_player_keep_screen_on_when_paused_title">暂停时保持屏幕常亮</string>
+  <string name="pref_player_keep_screen_on_when_paused_summary">视频暂停时屏幕保持唤醒</string>
+  <string name="pref_player_keep_screen_on_when_paused_summary_disabled">视频暂停时屏幕可以关闭</string>
+  <string name="pref_player_autoplay_after_screen_unlock_title">解锁后自动播放</string>
+  <string name="pref_player_autoplay_after_screen_unlock_summary">如果锁屏前正在播放，解锁后自动恢复播放</string>
+  <string name="pref_player_autoplay_after_screen_unlock_summary_disabled">解锁后视频保持暂停</string>
+  <string name="pref_player_show_buffered_range_title">在进度条上显示缓冲范围</string>
+  <string name="pref_player_show_buffered_range_summary">在进度条上显示播放头前方的在线缓冲区域</string>
+  <string name="pref_dynamic_speed_overlay_title">动态速度叠加层</string>
+  <string name="pref_show_navigation_bar_title">在控制栏中显示导航栏</string>
+  <!-- Gesture Preferences Hardcoded -->
+  <string name="pref_double_tap_seek_area_width_title">双击快进区域宽度</string>
+  <!-- Advanced Preferences Hardcoded -->
+  <string name="pref_export_settings_title">导出设置</string>
+  <string name="pref_export_settings_summary">将设置导出为 XML 文件</string>
+  <string name="pref_import_settings_title">导入设置</string>
+  <string name="pref_import_settings_summary">从 XML 文件导入设置</string>
+  <string name="pref_enable_lua_scripts_title">启用脚本</string>
+  <string name="pref_enable_lua_scripts_summary">从 MPV 配置目录加载脚本</string>
+  <string name="pref_manage_lua_scripts_title">管理脚本</string>
+  <string name="pref_manage_lua_scripts_summary">管理已启用的脚本</string>
+  <string name="pref_clear_config_cache_title">清除配置缓存</string>
+  <string name="pref_clear_config_cache_summary">清除缓存的 mpv.conf 设置</string>
+  <string name="pref_clear_thumbnail_cache_title">清除缩略图缓存</string>
+  <string name="pref_clear_thumbnail_cache_summary">删除所有已缓存的视频缩略图</string>
+  <string name="pref_layout_title">播放器布局</string>
+  <string name="pref_layout_summary">自定义播放器按钮布局</string>
+  <string name="pref_layout_reset_default">恢复默认</string>
+  <string name="pref_layout_top_right_controls">右上角控制</string>
+  <string name="pref_layout_bottom_right_controls">右下角控制</string>
+  <string name="pref_layout_bottom_left_controls">左下角控制</string>
+  <string name="pref_layout_portrait_bottom_controls">竖屏底部控制</string>
+  <string name="pref_layout_preview">预览</string>
+  <string name="pref_layout_reset_title">重置布局？</string>
+  <string name="pref_layout_reset_summary">所有自定义的播放器控制布局将恢复为默认位置</string>
+  <string name="pref_player">播放器</string>
+  <string name="pref_player_summary">方向、手势和控制</string>
+  <string name="pref_player_orientation">屏幕方向</string>
+  <string name="pref_player_orientation_free">自由</string>
+  <string name="pref_player_orientation_video">跟随视频</string>
+  <string name="pref_player_orientation_portrait">竖屏</string>
+  <string name="pref_player_orientation_reverse_portrait">反向竖屏</string>
+  <string name="pref_player_orientation_sensor_portrait">传感器竖屏</string>
+  <string name="pref_player_orientation_landscape">横屏</string>
+  <string name="pref_player_orientation_reverse_landscape">反向横屏</string>
+  <string name="pref_player_orientation_sensor_landscape">传感器横屏</string>
+  <string name="pref_player_save_position_on_quit">退出时保存播放位置</string>
+  <string name="pref_player_double_tap_seek_duration">双击快进时长</string>
+  <string name="pref_player_custom_skip_duration_title">自定义跳转时长</string>
+  <string name="pref_player_custom_skip_duration_summary">自定义跳转按钮的前进时长</string>
+  <string name="pref_player_seeking_title">快进快退</string>
+  <string name="pref_player_seek_preview_thumbfast_title">使用 ThumbFast 快进预览</string>
+  <string name="pref_player_seek_preview_thumbfast_summary">拖动进度条时显示快速缩略图气泡。关闭可使用传统实时视频预览。</string>
+  <string name="pref_player_close_after_eof">播放结束后关闭</string>
+  <string name="pref_player_remember_brightness">记住屏幕亮度</string>
+  <string name="pref_player_gestures">手势</string>
+  <string name="pref_player_gestures_brightness">亮度手势</string>
+  <string name="pref_player_gestures_volume">音量手势</string>
+  <string name="pref_player_gestures_pinch_to_zoom">双指缩放</string>
+  <string name="pref_player_gestures_pinch_to_zoom_subtitles">双指缩放字幕</string>
+  <string name="pref_player_gestures_swipe_subtitles_to_seek_dialog">滑动字幕快进对话框</string>
+  <string name="pref_player_gestures_horizontal_swipe_to_seek">水平滑动快进</string>
+  <string name="pref_player_gestures_horizontal_swipe_to_seek_summary">在屏幕上左右滑动以快进或快退</string>
+  <string name="pref_player_gestures_enable_center_swipe_up_gesture">在中间上滑打开播放列表</string>
+  <string name="pref_player_gestures_horizontal_swipe_sensitivity">水平滑动灵敏度</string>
+  <string name="pref_player_gestures_horizontal_swipe_sensitivity_summary">调整每次滑动覆盖的距离</string>
+  <string name="pref_player_gestures_hold_for_multiple_speed">长按倍速播放</string>
+  <string name="pref_player_controls">控制</string>
+  <string name="pref_player_controls_allow_gestures_in_panels">在面板中允许手势</string>
+  <string name="pref_player_controls_display_volume_as_percentage">以百分比显示音量</string>
+  <string name="pref_player_controls_show_loading_circle">显示加载圆圈</string>
+  <string name="pref_player_display_show_status_bar">在控制栏中显示系统状态栏</string>
+  <string name="pref_player_display_panel_opacity">面板不透明度</string>
+  <string name="pref_player_display">显示</string>
+  <string name="pref_gesture">手势</string>
+  <string name="pref_gesture_summary">双击、媒体控制</string>
+  <string name="pref_gesture_double_tap_title">双击</string>
+  <string name="pref_gesture_double_tap_none">无</string>
+  <string name="pref_gesture_double_tap_seek">快进</string>
+  <string name="pref_gesture_double_tap_play">播放/暂停</string>
+  <string name="pref_gesture_double_tap_custom">自定义</string>
+  <string name="pref_gesture_double_tap_left_title">双击（左侧）</string>
+  <string name="pref_gesture_double_tap_center_title">双击（中间）</string>
+  <string name="pref_gesture_single_tap_center_title">单击（中间）</string>
+  <string name="pref_gesture_double_tap_right_title">双击（右侧）</string>
+  <string name="pref_gesture_use_single_tap_for_center_title">使用单击作为中间手势</string>
+  <string name="pref_gesture_use_single_tap_for_center_summary">在中间区域使用单击（如播放/暂停）代替双击</string>
+  <string name="pref_gesture_center_vertical_subtitle_position_title">长按拖动移动字幕</string>
+  <string name="pref_gesture_center_vertical_subtitle_position_summary">在中间长按，然后上下拖动以移动字幕位置</string>
+  <string name="pref_gesture_view_title">视图</string>
+  <string name="pref_gesture_double_tap_custom_info">你可以在 input.conf 中使用以下按键码绑定自定义操作：
+
+左侧：MBTN_LEFT_DBL
+中间：MBTN_MID_DBL
+右侧：MBTN_RIGHT_DBL</string>
+  <string name="pref_gesture_media_title">媒体控制</string>
+  <string name="pref_gesture_media_previous">上一个</string>
+  <string name="pref_gesture_media_play">播放/暂停</string>
+  <string name="pref_gesture_media_next">下一个</string>
+  <string name="pref_gesture_media_custom_info">你可以在 input.conf 中使用以下按键码绑定媒体控制：
+
+上一个：PREV
+播放/暂停：PLAYPAUSE
+下一个：NEXT</string>
+  <string name="pref_gesture_tap_thumbnail_to_select_title">点击缩略图选择</string>
+  <string name="pref_gesture_tap_thumbnail_to_select_summary">启用后，点击缩略图进入选择模式。禁用时，点击缩略图播放视频。</string>
+  <string name="pref_decoder">解码器</string>
+  <string name="pref_decoder_summary">硬件解码、像素格式、去色带</string>
+  <string name="pref_decoder_profile_title">MPV 配置</string>
+  <string name="pref_decoder_try_hw_dec_title">尝试硬件解码</string>
+  <string name="pref_decoder_gpu_next_title">使用 gpu-next</string>
+  <string name="pref_decoder_gpu_next_summary">新的渲染后端</string>
+  <string name="pref_decoder_gpu_next_enable_title">启用 gpu-next？</string>
+  <string name="pref_decoder_gpu_next_warning">在某些设备上启用 gpu-next 可能导致播放时出现紫屏问题。</string>
+  <string name="pref_decoder_gpu_next_purple_screen_fix">如果出现紫屏，尝试在高级设置（mpv.conf）中禁用 opengl-pbo：</string>
+  <string name="pref_decoder_gpu_next_enable_anyway">仍然启用</string>
+  <string name="pref_decoder_debanding_title">去色带</string>
+  <string name="pref_decoder_vulkan_title">使用 Vulkan</string>
+  <string name="pref_decoder_vulkan_summary">在支持的设备上启用 Vulkan 渲染（可能提升性能）</string>
+  <string name="pref_decoder_vulkan_not_supported">不支持（需要 Android 13+ 且 Vulkan 1.3）</string>
+  <string name="pref_decoder_yuv420p_title">使用 YUV420P 像素格式</string>
+  <string name="pref_decoder_yuv420p_summary">可能修复某些视频编解码器的黑屏问题，也可以牺牲画质换取性能</string>
+  <string name="pref_subtitles">字幕</string>
+  <string name="pref_subtitles_summary">首选语言、字体和搜索</string>
+  <string name="pref_subtitle_search_title">在线字幕搜索</string>
+  <string name="pref_subtitle_search_summary">从在线源搜索和下载字幕</string>
+  <string name="pref_custom_lua_title">自定义按钮</string>
+  <string name="pref_custom_lua_summary">管理脚本驱动的播放器按钮</string>
+  <string name="pref_preferred_languages">首选语言</string>
+  <string name="pref_subtitles_fonts_dir">字体目录</string>
+  <string name="pref_subtitles_font_title">字幕字体</string>
+  <string name="pref_subtitles_font_summary">已选择：%1$s</string>
+  <string name="pref_subtitles_font_default">默认</string>
+  <string name="pref_subtitles_font_directory_summary">选择包含 .ttf 或 .otf 字幕字体的文件夹</string>
+  <string name="pref_subtitles_font_directory_selected">来源：%1$s</string>
+  <string name="pref_subtitles_font_no_custom">未加载自定义字体</string>
+  <string name="pref_subtitles_font_copy_failed">无法加载字体：%1$s</string>
+  <string name="pref_subtitles_autoload_title">自动加载字幕</string>
+  <string name="pref_subtitles_autoload_summary">自动加载同名外部字幕</string>
+  <string name="pref_subtitles_save_location">字幕保存位置</string>
+  <string name="pref_subtitles_search_online">在线字幕搜索…</string>
+  <string name="pref_subtitles_search_languages">字幕语言</string>
+  <string name="all_languages">全部（选择性过滤）</string>
+  <string name="pref_subtitles_clear_downloads">清除字幕下载</string>
+  <string name="pref_subtitles_clear_downloads_summary">删除当前保存位置中的所有文件</string>
+  <string name="pref_subtitles_clear_downloads_confirmation">Are you sure you want to delete all downloaded subtitles? This action cannot be undone.</s
+
+... [OUTPUT TRUNCATED - 17030 chars omitted out of 67030 total] ...
+
+"notification_playing">Playing</string>
+  <string name="notification_chapter_counter">第 %1$d 章，共 %2$d 章</string>
+  <string name="notification_permission_denied">后台播放控制需要通知权限。</string>
+  <string name="notification_permission_disabled">MpvRx 的通知已禁用。启用通知以显示播放控制。</string>
+  <string name="pref_advanced_notification_style">通知样式</string>
+  <!-- Media Info Activity -->
+  <string name="pref_player_use_precise_seeking">使用精确快进</string>
+  <!-- Folders Preferences -->
+  <string name="pref_folders_title">文件夹</string>
+  <string name="pref_folders_summary">管理文件夹黑名单和 .nomedia 处理</string>
+  <string name="pref_folders_include_nomedia_title">包含 .nomedia 文件夹</string>
+  <string name="pref_folders_include_nomedia_summary">启用后，扫描也会包含被 .nomedia 隐藏的文件夹及其子文件夹中的视频。</string>
+  <string name="pref_folders_empty_title">无黑名单文件夹</string>
+  <string name="pref_folders_empty_message">点击下方按钮添加你想从文件夹列表中隐藏的文件夹</string>
+  <string name="pref_folders_add_folder">添加文件夹到黑名单</string>
+  <string name="pref_folders_select_folders">选择文件夹</string>
+  <string name="pref_folders_loading">正在加载文件夹…</string>
+  <string name="pref_folders_no_folders">未找到文件夹</string>
+  <string name="pref_folders_clear_all">清除所有黑名单文件夹</string>
+  <string name="pref_folders_clear_all_confirm_title">清除所有黑名单文件夹？</string>
+  <string name="pref_folders_clear_all_confirm_message">这将从黑名单中移除所有文件夹。你可以稍后重新添加。</string>
+  <string name="pref_folders_blacklist">黑名单</string>
+  <string name="pref_folders_blacklisted">文件夹已加入黑名单</string>
+  <!-- M3U Playlist Strings -->
+  <string name="pref_subtitles_searching">搜索中…</string>
+  <string name="pref_subtitles_found">找到 %d 个字幕</string>
+  <string name="pref_subtitles_online_search_title">在线字幕搜索</string>
+  <!-- M3U Playlist Strings -->
+  <string name="playlist_add_m3u_title">添加 M3U 播放列表</string>
+  <string name="playlist_add_m3u_description">输入 M3U 播放列表文件的 URL</string>
+  <string name="playlist_url_label">播放列表 URL</string>
+  <string name="playlist_url_placeholder">https://example.com/playlist.m3u</string>
+  <string name="playlist_url_hint">支持 .m3u 和 .m3u8 格式</string>
+  <string name="playlist_add_success">M3U 播放列表添加成功</string>
+  <string name="playlist_add_error">添加 M3U 播放列表失败：%s</string>
+  <string name="playlist_create_empty">创建空播放列表</string>
+  <string name="playlist_add_from_url">从 M3U/M3U8 URL 添加</string>
+  <string name="playlist_refresh_m3u">刷新 M3U 播放列表</string>
+  <string name="playlist_refresh_success">播放列表刷新成功</string>
+  <string name="playlist_refresh_error">刷新播放列表失败：%s</string>
+  <string name="playlist_m3u_badge">M3U</string>
+  <string name="pref_player_safe_area_window_title">安全区域窗口</string>
+  <string name="pref_player_safe_area_window_summary">在摄像头挖孔周围内缩播放器控制和统计信息</string>
+  <string name="pref_subtitles_search_mode_title">搜索模式</string>
+  <string name="pref_subtitles_subhub_sources_title">SubHub 来源</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Main Settings Hub Section Headers                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_appearance">外观</string>
+  <string name="pref_section_playback">播放</string>
+  <string name="pref_section_gestures_controls">手势与控制</string>
+  <string name="pref_section_subtitles">字幕</string>
+  <string name="pref_section_storage">存储</string>
+  <string name="pref_section_storage_summary">媒体路径、隐藏文件夹</string>
+  <string name="pref_section_ai">AI</string>
+  <string name="pref_section_ai_title">AI 集成</string>
+  <string name="pref_section_ai_summary">AI 重命名、字幕翻译、语音转文字、离线模型（OpenCode/Groq/OpenAI）</string>
+  <string name="pref_section_advanced">高级</string>
+  <string name="pref_section_about">关于</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Appearance - Animations Section                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_animations">动画</string>
+  <string name="pref_anim_controls_style_title">控制动画样式</string>
+  <string name="pref_anim_controls_style_summary">选择播放器控制的出现和消失方式</string>
+  <string name="pref_anim_video_open_title">视频打开动画</string>
+  <string name="pref_anim_video_open_summary">选择开始播放时的过渡效果</string>
+  <string name="pref_anim_tab_nav_style_title">标签导航样式</string>
+  <string name="pref_anim_tab_nav_style_summary">底部标签之间的过渡效果</string>
+  <string name="pref_anim_screen_nav_style_title">页面导航样式</string>
+  <string name="pref_anim_screen_nav_style_summary">设置页面之间的过渡效果</string>
+  <string name="pref_anim_speed_title">动画速度</string>
+  <string name="pref_anim_speed_very_fast">非常快（%.1f×）</string>
+  <string name="pref_anim_speed_fast">快（%.1f×）</string>
+  <string name="pref_anim_speed_normal">正常（%.1f×）</string>
+  <string name="pref_anim_speed_slow">慢（%.1f×）</string>
+  <string name="pref_anim_speed_very_slow">非常慢（%.1f×）</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Player - General Section                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_general">通用</string>
+  <string name="pref_playlist_mode_title">启用上一个/下一个导航</string>
+  <string name="pref_playlist_mode_summary">为文件夹中的所有视频显示上一个/下一个按钮</string>
+  <string name="pref_playlist_mode_summary_disabled">单独播放视频（多选可创建播放列表）</string>
+
+  <!-- Player - Seeking Section (additional)                      -->
+  <string name="pref_online_skip_markers_title">使用在线跳过标记</string>
+  <string name="pref_online_skip_markers_summary">从选定提供商获取片头、回顾、片尾、制作人员和预告标记</string>
+  <string name="pref_marker_provider_title">在线标记提供商</string>
+  <string name="pref_marker_provider_summary">选择 IntroDB、TIDB、AniSkip 或 Anime Skip 作为在线片头/片尾标记源</string>
+  <string name="pref_chapter_detect_title">从章节标题检测片头/片尾</string>
+  <string name="pref_chapter_detect_summary">分析章节名称变体（如 opening/ending/credits）并创建跳过标记</string>
+  <string name="pref_auto_skip_intro_title">自动跳过片头</string>
+  <string name="pref_auto_skip_intro_summary">播放时自动跳过片头标记</string>
+  <string name="pref_auto_skip_outro_title">自动跳过片尾</string>
+  <string name="pref_auto_skip_outro_summary">播放时自动跳过片尾标记</string>
+
+  <!-- Player - Display & Controls Section                        -->
+  <string name="pref_section_display_controls">显示与控制</string>
+  <string name="pref_nav_bar_title">在控制栏中显示导航栏</string>
+  <string name="pref_nav_bar_summary">在播放器控制上显示 Android 系统导航栏</string>
+
+  <!-- Player - Gesture & Action Overlays Section                 -->
+  <string name="pref_section_overlays">手势与操作叠加层</string>
+  <string name="pref_volume_overlay_title">音量滑块叠加层</string>
+  <string name="pref_volume_overlay_summary">滑动调节音量时显示垂直音量指示条</string>
+  <string name="pref_brightness_overlay_title">亮度滑块叠加层</string>
+  <string name="pref_brightness_overlay_summary">滑动调节亮度时显示垂直亮度指示条</string>
+  <string name="pref_hold_speed_overlay_pref_title">长按速度叠加层</string>
+  <string name="pref_hold_speed_overlay_pref_summary">长按加速播放时显示速度标签和滑块</string>
+  <string name="pref_aspect_ratio_overlay_title">宽高比反馈</string>
+  <string name="pref_aspect_ratio_overlay_summary">切换宽高比（16:9、适应、裁剪…）时显示简短提示</string>
+  <string name="pref_zoom_overlay_title">缩放级别反馈</string>
+  <string name="pref_zoom_overlay_summary">双指缩放时显示缩放百分比提示</string>
+  <string name="pref_repeat_shuffle_overlay_title">重复和随机播放反馈</string>
+  <string name="pref_repeat_shuffle_overlay_summary">切换重复模式或随机播放时显示提示</string>
+  <string name="pref_action_feedback_overlay_title">操作反馈提示</string>
+  <string name="pref_action_feedback_overlay_summary">自定义按钮、氛围模式切换、字幕拖动和 Lua 脚本的简短文字提示</string>
+  <string name="pref_provider_status_overlay_title">提供商状态反馈</string>
+  <string name="pref_provider_status_overlay_summary">显示 Wyzie 字幕和标记查找的在线提供商错误/状态消息</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Gestures - Swipe & Speed Section                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_swipe_speed">滑动与速度</string>
+  <string name="pref_sensitivity_low">低</string>
+  <string name="pref_sensitivity_medium">中</string>
+  <string name="pref_sensitivity_high">高</string>
+  <string name="pref_swipe_sensitivity_summary">当前：%1$d/100（%2$s）</string>
+  <string name="pref_hold_speed_summary_format">%.2fx</string>
+  <string name="pref_dynamic_speed_overlay_summary">长按和滑动时显示高级速度控制叠加层</string>
+  <string name="pref_custom_seek_dialog_text">输入自定义快进时长（秒）（1–120）</string>
+  <string name="pref_custom_seek_label">秒</string>
+  <string name="pref_double_tap_seek_area_width_summary">当前：%1$d%%</string>
+  <string name="pref_custom_seek_summary_format">自定义（%1$d 秒）</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Player Controls Sections                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_landscape_controls">横屏控制</string>
+  <string name="pref_section_portrait_controls">竖屏控制</string>
+  <string name="pref_section_seekbar_style">进度条样式</string>
+  <string name="pref_section_player_controls_appearance">外观</string>
+  <string name="pref_custom_time_dialog_text">输入自定义隐藏时间（毫秒）</string>
+  <string name="pref_custom_time_label">毫秒</string>
+  <string name="pref_edit_region_content_desc">编辑 %1$s</string>
+  <string name="pref_none">无</string>
+  <string name="pref_custom_time_summary_format">自定义（%1$d 毫秒）</string>
+  <string name="pref_time_ms_summary">%1$d 毫秒</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Subtitles Preferences                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_subtitle_fonts">字体</string>
+  <string name="pref_section_subtitle_search">字幕搜索</string>
+  <string name="pref_wyzie_api_key_title">Wyzie API 密钥</string>
+  <string name="pref_wyzie_api_key_summary_error">字幕搜索需要此密钥</string>
+  <string name="pref_wyzie_api_key_summary_saved">已保存在此设备上</string>
+  <string name="pref_wyzie_api_key_dialog_text">粘贴你在 sub.wyzie.io/redeem 获取的密钥</string>
+  <string name="pref_wyzie_api_key_placeholder">wyzie-…</string>
+  <string name="pref_subtitle_sources_title">字幕来源</string>
+  <string name="pref_all_sources">全部</string>
+  <string name="pref_section_advanced_search_filters">高级搜索过滤</string>
+  <string name="pref_hearing_impaired_title">听障友好</string>
+  <string name="pref_hearing_impaired_summary">仅显示为听障人士优化的字幕</string>
+  <string name="pref_ai_subtitles_title">AI 字幕</string>
+  <string name="pref_ai_subtitles_all">全部（人工 + AI）</string>
+  <string name="pref_ai_subtitles_human_only">仅人工</string>
+  <string name="pref_ai_subtitles_ai_only">仅 AI</string>
+  <string name="pref_preferred_formats_title">首选格式</string>
+  <string name="pref_preferred_encodings_title">首选编码</string>
+  <string name="pref_subtitle_search_error">错误：%1$s</string>
+  <string name="pref_subtitle_search_attribution">字幕搜索由以下提供</string>
+  <string name="pref_subtitle_search_link">sub.wyzie.io</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Advanced Preferences                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_section_backup_restore">备份与恢复</string>
+  <string name="pref_export_complete_title">导出完成</string>
+  <string name="pref_export_complete_text">成功导出 %1$d 个项目！</string>
+  <string name="pref_import_complete_title">导入完成</string>
+  <string name="pref_import_complete_text">成功导入：%1$s
+失败：%2$s
+版本：%3$s
+
+请重启应用以使所有更改生效。</string>
+  <string name="pref_section_storage_root">存储根目录</string>
+  <string name="pref_base_storage_folder_summary">点击选择 — 创建 Subtitles/、Fonts/、scripts/ 子目录</string>
+  <string name="pref_clear_storage_root_title">清除存储根目录</string>
+  <string name="pref_section_mpv_config">MPV 配置</string>
+  <string name="pref_config_edit_summary">点击编辑配置</string>
+  <string name="pref_section_scripts">脚本（Lua / JS）</string>
+  <string name="pref_manage_scripts_summary_disabled">请先设置存储位置并启用脚本</string>
+  <string name="pref_manage_scripts_summary_none">无已启用的脚本</string>
+  <string name="pref_manage_scripts_summary_singular">已启用 1 个脚本</string>
+  <string name="pref_manage_scripts_summary_plural">已启用 %1$d 个脚本</string>
+  <string name="pref_custom_buttons_title">自定义按钮</string>
+  <string name="pref_custom_buttons_summary">创建和管理脚本驱动的播放器按钮</string>
+  <string name="pref_section_data_cache">数据与缓存</string>
+  <string name="pref_config_cache_cleared_toast">配置缓存已清除</string>
+  <string name="pref_thumbnail_cache_confirm_title">清除缩略图缓存？</string>
+  <string name="pref_thumbnail_cache_confirm_subtitle">这将从存储和内存中删除已缓存的缩略图。</string>
+  <string name="pref_section_notification">通知</string>
+  <string name="pref_section_logging">日志</string>
+  <string name="pref_export_failed_toast">导出失败：%1$s</string>
+  <string name="pref_import_failed_toast">导入失败：%1$s</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- AI Integration                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_ai_features_section">AI 功能</string>
+  <string name="pref_ai_enabled_title">启用 AI 功能</string>
+  <string name="pref_ai_enabled_summary">AI 功能已激活</string>
+  <string name="pref_ai_disabled_summary">AI 功能已禁用</string>
+  <string name="pref_ai_provider_section">提供商</string>
+  <string name="pref_ai_provider_title">AI 提供商</string>
+  <string name="pref_hf_setup_section">Hugging Face 设置</string>
+  <string name="pref_hf_token_title">Hugging Face 令牌</string>
+  <string name="pref_hf_token_summary_error">受限模型需要此令牌。从 huggingface.co/settings/tokens 获取</string>
+  <string name="pref_hf_token_summary_saved">令牌已保存在设备上</string>
+  <string name="pref_hf_token_dialog_text">粘贴你的 Hugging Face 令牌</string>
+  <string name="pref_hf_token_placeholder">hf_…</string>
+  <string name="pref_offline_models_section">离线模型</string>
+  <string name="pref_model_picker_header">速度优先模型选择器</string>
+  <string name="pref_model_picker_description">模型按加载后体感速度、内存压力和字幕翻译质量排名。</string>
+  <string name="pref_filter_recommended">推荐</string>
+  <string name="pref_filter_fastest">最快</string>
+  <string name="pref_filter_best_translation">最佳翻译</string>
+  <string name="pref_filter_downloaded">已下载</string>
+  <string name="pref_model_download_success">模型下载成功</string>
+  <string name="pref_model_download_failed">下载失败：%1$s</string>
+  <string name="pref_model_deleted">模型已删除</string>
+  <string name="pref_model_using">正在使用 %1$s</string>
+  <string name="pref_benchmark_saved">基准测试已保存：%1$s</string>
+  <string name="pref_benchmark_failed">基准测试失败：%1$s</string>
+  <string name="pref_api_config_section">API 配置</string>
+  <string name="pref_api_key_saved">API 密钥已保存在设备上</string>
+  <string name="pref_hide_key">隐藏密钥</string>
+  <string name="pref_show_key">显示密钥</string>
+  <string name="pref_verify_key">验证密钥</string>
+  <string name="pref_model_section">模型</string>
+  <string name="pref_available_models_header">可用模型</string>
+  <string name="pref_fetch_models">获取模型</string>
+  <string name="pref_select_model_placeholder">点击选择模型</string>
+  <string name="pref_verify_model_header">验证模型</string>
+  <string name="pref_check_model_access">检查模型访问权限</string>
+  <string name="pref_general_settings_section">通用设置</string>
+  <string name="pref_show_ai_reasoning_title">显示 AI 推理过程（思考）</string>
+  <string name="pref_show_ai_reasoning_summary">启用此选项以查看支持模型的内部思考过程</string>
+  <string name="pref_ai_features_subsection">功能</string>
+  <string name="pref_ai_rename_title">AI 智能重命名</string>
+  <string name="pref_ai_rename_summary">使用 AI 为批量重命名操作生成简洁的文件名</string>
+  <string name="pref_ai_search_title">AI 搜索</string>
+  <string name="pref_ai_search_summary">自动格式化视频标题以用于 Wyzie/SubHub 字幕搜索</string>
+  <string name="pref_stt_section">语音转文字【极度实验性】</string>
+  <string name="pref_stt_title">实时字幕生成</string>
+  <string name="pref_stt_summary">播放视频时从音频生成字幕</string>
+  <string name="pref_stt_output_format_title">默认输出格式</string>
+  <string name="pref_stt_provider_title">语音转文字提供商</string>
+  <string name="pref_stt_provider_summary">用于实时流式传输和批量字幕生成</string>
+  <string name="pref_audio_language_title">音频语言</string>
+  <string name="pref_audio_language_summary">自动检测语音语言</string>
+  <string name="pref_translation_section">字幕翻译</string>
+  <string name="pref_enable_translation_title">启用翻译</string>
+  <string name="pref_enable_translation_summary">使用 AI 翻译外部字幕</string>
+  <string name="pref_custom_prompt_section">自定义提示词</string>
+  <string name="pref_override_instructions_title">覆盖默认指令</string>
+  <string name="pref_override_instructions_enabled_summary">将使用自定义提示词代替内置指令</string>
+  <string name="pref_override_instructions_disabled_summary">将使用内置 AI 指令</string>
+  <string name="pref_custom_prompts_header">自定义提示词</string>
+  <string name="pref_custom_prompts_description">留空以使用该任务的内置指令。如果有保存的旧版全局提示词，将作为后备使用。</string>
+  <string name="pref_custom_rename_prompt_label">自定义重命名提示词</string>
+  <string name="pref_custom_rename_prompt_placeholder">AI 文件重命名的指令…</string>
+  <string name="pref_custom_translation_prompt_label">自定义字幕翻译提示词</string>
+  <string name="pref_custom_translation_prompt_placeholder">AI 字幕翻译的指令…</string>
+  <string name="pref_custom_format_prompt_label">自定义字幕格式化提示词</string>
+  <string name="pref_custom_format_prompt_placeholder">字幕搜索查询格式化的指令…</string>
+  <string name="pref_legacy_prompt_info">已保存旧版全局提示词。当任务特定提示词为空时将使用它。</string>
+  <string name="pref_translation_warning_title">字幕翻译</string>
+  <string name="pref_translation_warning_text">字幕翻译可能不太完美。为获得最佳效果，请使用更好的模型，并且不要因为字幕不完美就抱怨。</string>
+
+  <!-- AI - API Key titles/placeholders for each provider         -->
+  <string name="pref_opencode_api_key_title">OpenCode API 密钥</string>
+  <string name="pref_opencode_api_key_hint">从 opencode.ai/auth 获取密钥</string>
+  <string name="pref_opencode_api_key_placeholder">sk-…</string>
+  <string name="pref_groq_api_key_title">Groq API 密钥</string>
+  <string name="pref_groq_api_key_hint">从 console.groq.com 获取密钥</string>
+  <string name="pref_groq_api_key_placeholder">gsk_…</string>
+  <string name="pref_openai_api_key_title">OpenAI API 密钥</string>
+  <string name="pref_openai_api_key_hint">从 platform.openai.com 获取密钥</string>
+  <string name="pref_openai_api_key_placeholder">sk-…</string>
+  <string name="pref_anthropic_api_key_title">Anthropic API 密钥</string>
+  <string name="pref_anthropic_api_key_hint">从 console.anthropic.com 获取密钥</string>
+  <string name="pref_anthropic_api_key_placeholder">sk-ant-…</string>
+  <string name="pref_openrouter_api_key_title">OpenRouter API 密钥</string>
+  <string name="pref_openrouter_api_key_hint">从 openrouter.ai 获取密钥</string>
+  <string name="pref_openrouter_api_key_placeholder">sk-or-…</string>
+  <string name="pref_together_api_key_title">Together API 密钥</string>
+  <string name="pref_together_api_key_hint">从 api.together.ai 获取密钥</string>
+  <string name="pref_together_api_key_placeholder">…</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Folders Preferences                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_storage_screen_title">存储</string>
+  <string name="pref_media_library_section">媒体库</string>
+  <string name="pref_hidden_folders_section">隐藏文件夹</string>
+  <string name="pref_clear_content_desc">清除</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Search Index Entries (SearchablePreference.kt)             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="search_online_skip_markers_summary">从在线提供商获取片头、回顾、片尾、制作人员和预告标记</string>
+  <string name="search_marker_provider_summary">选择 IntroDB、TIDB、AniSkip 或 Anime Skip 作为在线片头/片尾标记源</string>
+  <string name="search_chapter_detect_summary">从章节名称（如片头、片尾、制作人员或预告）创建跳过标记</string>
+  <string name="search_auto_skip_intro_summary">播放时自动跳过片头标记</string>
+  <string name="search_auto_skip_outro_summary">播放时自动跳过片尾标记</string>
+  <string name="search_subtitle_save_folder_title">字幕保存文件夹</string>
+  <string name="search_subtitle_save_folder_summary">下载字幕的保存位置</string>
+  <string name="search_fonts_folder_title">字体文件夹</string>
+  <string name="search_fonts_folder_summary">用于字幕渲染的字体</string>
+  <string name="search_base_storage_summary">根目录 — 自动创建 Subtitles/ 和 Fonts/ 子目录</string>
+  <string name="search_ai_integration_summary">AI 驱动的重命名、字幕格式化、语音转文字、字幕翻译、离线模型</string>
+  <string name="search_ai_provider_summary">选择 OpenCode、Groq、OpenAI、Anthropic、OpenRouter、Together 或离线本地模型</string>
+  <string name="search_api_key_config_title">API 密钥配置</string>
+  <string name="search_api_key_config_summary">输入并验证你的 AI 提供商 API 密钥</string>
+  <string name="search_ai_model_selection_title">AI 模型选择</string>
+  <string name="search_ai_model_selection_summary">获取并选择要使用的 AI 模型</string>
+  <string name="search_ai_reasoning_summary">显示支持模型的内部思考过程</string>
+  <string name="search_ai_rename_summary">使用 AI 为批量重命名操作生成简洁的文件名</string>
+  <string name="search_ai_search_summary">自动格式化视频标题以用于 Wyzie/SubHub 字幕搜索</string>
+  <string name="search_stt_title">语音转文字</string>
+  <string name="search_stt_summary">配置 STT 提供商、实时模型、音频语言和输出格式</string>
+  <string name="search_translation_summary">使用 AI 翻译外部字幕，支持自动翻译目标语言</string>
+  <string name="search_custom_ai_prompts_title">自定义 AI 提示词</string>
+  <string name="search_custom_ai_prompts_summary">覆盖重命名、翻译和格式化任务的默认指令</string>
+  <string name="search_offline_ai_models_title">离线 AI 模型</string>
+  <string name="search_offline_ai_models_summary">下载和管理本地 LLM 以实现完全离线的 AI 功能</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Decoder Preferences                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_decoder_vulkan_experimental_suffix">（实验性）</string>
+  <string name="pref_anime4k_link">github.com/bloc97/Anime4K</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Dialogs & Common                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="generic_hide_key">隐藏密钥</string>
+  <string name="generic_show_key">显示密钥</string>
+  <string name="generic_verify">验证</string>
+  <string name="generic_fetch">获取</string>
+  <string name="generic_got_it">知道了</string>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Advanced - Cache Sizes & Counts                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <string name="pref_clear_playback_history_summary">清除播放位置、选定字幕、音轨、延迟和速度</string>
+  <string name="pref_clear_playback_history_recently_played">同时清除 %1$d 个最近播放项目</string>
+  <string name="pref_clear_playback_history_recently_played_none">没有最近播放项目需要清除</string>
+  <string name="pref_config_cache_summary">清除缓存的 mpv.conf 设置</string>
+  <string name="pref_config_cache_size">大小：%1$s</string>
+  <string name="pref_thumbnail_cache_summary">删除所有已缓存的视频缩略图（浏览文件夹时会重新生成）</string>
+  <string name="pref_thumbnail_cache_size">大小：%1$s</string>
+  <string name="pref_fonts_cache_summary">移除所有已缓存的字幕字体</string>
+  <string name="pref_fonts_cache_size">大小：%1$s · %2$d 个字体</string>
+  <string name="pref_failed_to_clear">清除失败：%1$s</string>
+  <string name="pref_export_failed">导出失败：%1$s</string>
+  <string name="pref_import_failed">导入失败：%1$s</string>
+  <string name="pref_size_bytes">%1$d B</string>
+  <string name="pref_size_kb">%.1f KB</string>
+  <string name="pref_size_mb">%.1f MB</string>
+  <string name="toast_need_ytdl">需要安装 yt-dlp 才能播放此链接（设置 > 高级 > yt-dlp 管理器）</string>
+  <string name="pref_ytdl_quality_any">任意</string>
+  <string name="pref_ytdl_prefer_h264_title">优先 H.264（AVC）</string>
+  <string name="pref_ytdl_prefer_h264_summary">提高旧设备兼容性但可能限制画质</string>
+  <string name="pref_ytdl_quality_title">首选画质</string>
+
+  <!-- Customizable Skip Keywords -->
+  <string name="pref_custom_intro_keywords_enabled">使用自定义关键词跳过片头</string>
+  <string name="pref_custom_intro_keywords_summary">启用用户自定义的片头匹配关键词代替默认关键词</string>
+  <string name="pref_custom_intro_keywords_title">自定义片头关键词</string>
+  <string name="pref_custom_intro_keywords_dialog_desc">输入片头/开场的逗号分隔关键词</string>
+  <string name="pref_custom_outro_keywords_enabled">使用自定义关键词跳过片尾</string>
+  <string name="pref_custom_outro_keywords_summary">启用用户自定义的片尾匹配关键词代替默认关键词</string>
+  <string name="pref_custom_outro_keywords_title">自定义片尾关键词</string>
+  <string name="pref_custom_outro_keywords_dialog_desc">输入片尾/结尾的逗号分隔关键词</string>
+</resources>
