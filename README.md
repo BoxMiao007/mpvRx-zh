@@ -40,6 +40,24 @@
 
 ---
 
+## 中文说明
+
+这是 [MpvRx](https://github.com/Riteshp2001/mpvRx) 的中文汉化版本。
+
+**汉化内容：**
+- 完整的简体中文 UI 翻译（749 条字符串）
+- 独立 applicationId（`com.boxmiao.mpvrxzh`），可与原版共存
+
+**同步策略：**
+- 上游仓库：[Riteshp2001/mpvRx](https://github.com/Riteshp2001/mpvRx)
+- 汉化文件独立于原版代码（`values-zh-rCN/strings.xml`），同步上游时几乎零冲突
+- 定期检查上游差异，有新字符串时补翻译
+
+**安装：**
+从 [Releases](https://github.com/BoxMiao007/mpvRx-zh/releases) 下载 APK 安装即可。
+
+---
+
 ## Showcase
 
 <div align="center">
