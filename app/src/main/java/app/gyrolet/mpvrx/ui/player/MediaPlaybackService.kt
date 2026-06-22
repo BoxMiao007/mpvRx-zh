@@ -417,7 +417,7 @@ class MediaPlaybackService :
 
   private fun playPauseAction() = NotificationCompat.Action(
     if (paused) android.R.drawable.ic_media_play else android.R.drawable.ic_media_pause,
-    if (paused) "Play" else "Pause",
+    if (paused) getString(R.string.media_play) else getString(R.string.media_pause),
     MediaButtonReceiver.buildMediaButtonPendingIntent(this, PlaybackStateCompat.ACTION_PLAY_PAUSE),
   )
 

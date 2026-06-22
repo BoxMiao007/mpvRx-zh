@@ -31,26 +31,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import app.gyrolet.mpvrx.ui.theme.AppMotion
+import androidx.annotation.StringRes
+import app.gyrolet.mpvrx.R
 import kotlinx.coroutines.delay
 
 /** Which style to use when player controls appear/disappear. */
-enum class ControlsAnimationStyle(val displayName: String) {
-  Default("Default"),
-  Elastic("Elastic Bounce"),
-  Cinematic("Cinematic Scale"),
-  SlideUp("Slide Up"),
-  Minimal("Minimal Fade"),
-  None("None"),
+enum class ControlsAnimationStyle(@StringRes val displayNameRes: Int) {
+  Default(R.string.anim_default),
+  Elastic(R.string.anim_elastic_bounce),
+  Cinematic(R.string.anim_cinematic_scale),
+  SlideUp(R.string.anim_slide_up),
+  Minimal(R.string.anim_minimal_fade),
+  None(R.string.anim_none),
 }
 
 /** Animation style when the video first opens. */
-enum class VideoOpenAnimation(val displayName: String) {
-  Default("Default"),
-  FadeDark("Fade from Black"),
-  ZoomBurst("Zoom Burst"),
-  SlideUp("Slide Up"),
-  CinemaBars("Cinema Bars"),
-  None("None"),
+enum class VideoOpenAnimation(@StringRes val displayNameRes: Int) {
+  Default(R.string.anim_default),
+  FadeDark(R.string.anim_fade_from_black),
+  ZoomBurst(R.string.anim_zoom_burst),
+  SlideUp(R.string.anim_slide_up),
+  CinemaBars(R.string.anim_cinema_bars),
+  None(R.string.anim_none),
 }
 
 /** Tracks whether the selected open animation should still cover the player while media loads. */
@@ -60,13 +62,13 @@ data class VideoOpenAnimationState(
 )
 
 /** Animation style for tab / screen navigation. */
-enum class NavigationAnimStyle(val displayName: String) {
-  Default("Default"),
-  Elastic("Elastic Slide"),
-  Depth("Depth Zoom"),
-  FlipFade("Flip Fade"),
-  Minimal("Minimal Fade"),
-  None("None"),
+enum class NavigationAnimStyle(@StringRes val displayNameRes: Int) {
+  Default(R.string.anim_default),
+  Elastic(R.string.anim_elastic_slide),
+  Depth(R.string.anim_depth_zoom),
+  FlipFade(R.string.anim_flip_fade),
+  Minimal(R.string.anim_minimal_fade),
+  None(R.string.anim_none),
 }
 
 // ────────────────────────────────────────────────────────────────────────────

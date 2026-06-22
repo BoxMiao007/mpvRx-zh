@@ -1870,7 +1870,7 @@ private fun CustomStatsPageSixOverlay(
 
           val sourceLabel = if (isHdrSource) "HDR Source" else "SDR Source"
           val outputLabel = if (isHdrOutputEnabled) {
-            "HDR - ${hdrScreenMode.shortTitle} Mode Output"
+            "HDR - ${context.getString(hdrScreenMode.shortTitleRes)} Mode Output"
           } else {
             "SDR Output"
           }

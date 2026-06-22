@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -65,7 +67,7 @@ fun AnimatedSection(
       }
       Icon(
         imageVector = Icons.Default.KeyboardArrowDown,
-        contentDescription = if (isExpanded) "Collapse" else "Expand",
+        contentDescription = if (isExpanded) stringResource(R.string.player_controls_collapse) else stringResource(R.string.player_controls_expand),
         modifier = Modifier.rotate(iconRotation),
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
       )
@@ -125,7 +127,7 @@ fun AnimatedSection(
       )
       Icon(
         imageVector = Icons.Default.KeyboardArrowDown,
-        contentDescription = if (isExpanded) "Collapse" else "Expand",
+        contentDescription = if (isExpanded) stringResource(R.string.player_controls_collapse) else stringResource(R.string.player_controls_expand),
         modifier = Modifier.rotate(iconRotation),
         tint = MaterialTheme.colorScheme.onSurfaceVariant,
       )

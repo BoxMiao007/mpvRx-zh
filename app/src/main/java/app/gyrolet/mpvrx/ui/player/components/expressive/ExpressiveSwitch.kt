@@ -25,6 +25,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
@@ -65,7 +67,7 @@ fun ExpressiveSwitch(
     modifier = modifier
       .semantics {
         role = Role.Switch
-        stateDescription = if (checked) "On" else "Off"
+        stateDescription = if (checked) stringResource(R.string.player_controls_on) else stringResource(R.string.player_controls_off)
       }
       .toggleable(
         value = checked,

@@ -204,7 +204,7 @@ private fun HdrModeOption(
         verticalArrangement = Arrangement.spacedBy(2.dp),
       ) {
         Text(
-          text = mode.title,
+          text = stringResource(mode.titleRes),
           style = MaterialTheme.typography.titleMedium,
           fontWeight = FontWeight.SemiBold,
         )

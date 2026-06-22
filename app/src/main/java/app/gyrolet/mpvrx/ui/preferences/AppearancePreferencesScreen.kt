@@ -562,9 +562,9 @@ object AppearancePreferencesScreen : Screen {
                                 value = controlsAnimStyle,
                                 onValueChange = playerPreferences.controlsAnimStyle::set,
                                 values = ControlsAnimationStyle.entries,
-                                valueToText = { AnnotatedString(it.displayName) },
+                                valueToText = { AnnotatedString(stringResource(it.displayNameRes)) },
                                 title = { Text(stringResource(R.string.pref_anim_controls_style_title)) },
-                                summary = { Text(controlsAnimStyle.displayName, color = MaterialTheme.colorScheme.outline) },
+                                summary = { Text(stringResource(controlsAnimStyle.displayNameRes), color = MaterialTheme.colorScheme.outline) },
                             )
 
                             PreferenceDivider()
@@ -574,9 +574,9 @@ object AppearancePreferencesScreen : Screen {
                                 value = videoOpenAnim,
                                 onValueChange = playerPreferences.videoOpenAnimation::set,
                                 values = VideoOpenAnimation.entries,
-                                valueToText = { AnnotatedString(it.displayName) },
+                                valueToText = { AnnotatedString(stringResource(it.displayNameRes)) },
                                 title = { Text(stringResource(R.string.pref_anim_video_open_title)) },
-                                summary = { Text(videoOpenAnim.displayName, color = MaterialTheme.colorScheme.outline) },
+                                summary = { Text(stringResource(videoOpenAnim.displayNameRes), color = MaterialTheme.colorScheme.outline) },
                             )
 
                             PreferenceDivider()
@@ -586,9 +586,9 @@ object AppearancePreferencesScreen : Screen {
                                 value = navAnimStyle,
                                 onValueChange = playerPreferences.navAnimStyle::set,
                                 values = NavigationAnimStyle.entries,
-                                valueToText = { AnnotatedString(it.displayName) },
+                                valueToText = { AnnotatedString(stringResource(it.displayNameRes)) },
                                 title = { Text(stringResource(R.string.pref_anim_tab_nav_style_title)) },
-                                summary = { Text(navAnimStyle.displayName, color = MaterialTheme.colorScheme.outline) },
+                                summary = { Text(stringResource(navAnimStyle.displayNameRes), color = MaterialTheme.colorScheme.outline) },
                             )
 
                             PreferenceDivider()
@@ -598,9 +598,9 @@ object AppearancePreferencesScreen : Screen {
                                 value = appNavStyle,
                                 onValueChange = playerPreferences.appNavStyle::set,
                                 values = NavigationAnimStyle.entries,
-                                valueToText = { AnnotatedString(it.displayName) },
+                                valueToText = { AnnotatedString(stringResource(it.displayNameRes)) },
                                 title = { Text(stringResource(R.string.pref_anim_screen_nav_style_title)) },
-                                summary = { Text(appNavStyle.displayName, color = MaterialTheme.colorScheme.outline) },
+                                summary = { Text(stringResource(appNavStyle.displayNameRes), color = MaterialTheme.colorScheme.outline) },
                             )
 
                             PreferenceDivider()

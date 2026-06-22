@@ -37,6 +37,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import app.gyrolet.mpvrx.R
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -348,7 +350,7 @@ fun PlaylistTrackListItem(
           AsyncImage(
             model = remember(item.uri, item.path) { buildPlaylistThumbnailRequest(context, item) },
             imageLoader = imageLoader,
-            contentDescription = "Thumbnail",
+            contentDescription = stringResource(R.string.browser_thumbnail),
             modifier = Modifier.matchParentSize(),
             contentScale = ContentScale.Crop,
           )
@@ -520,7 +522,7 @@ fun PlaylistTrackGridItem(
           AsyncImage(
             model = remember(item.uri, item.path) { buildPlaylistThumbnailRequest(context, item) },
             imageLoader = imageLoader,
-            contentDescription = "Thumbnail",
+            contentDescription = stringResource(R.string.browser_thumbnail),
             modifier = Modifier.matchParentSize(),
             contentScale = ContentScale.Crop,
           )

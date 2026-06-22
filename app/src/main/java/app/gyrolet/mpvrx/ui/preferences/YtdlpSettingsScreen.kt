@@ -239,7 +239,7 @@ object YtdlpSettingsScreen : Screen {
                             title = "Video Codec",
                             value = codecPreference,
                             values = YtdlCodecPreference.entries,
-                            valueLabel = { it.title },
+                            valueLabel = { stringResource(it.titleRes) },
                             onValueChange = { selected ->
                                 ytdlPreferences.codecPreference.set(selected)
                                 ytdlPreferences.preferH264.set(selected == YtdlCodecPreference.H264)
@@ -272,7 +272,7 @@ object YtdlpSettingsScreen : Screen {
                             title = "HDR Preference",
                             value = hdrPreference,
                             values = YtdlHdrPreference.entries,
-                            valueLabel = { it.title },
+                            valueLabel = { stringResource(it.titleRes) },
                             onValueChange = {
                                 ytdlPreferences.hdrPreference.set(it)
                                 updateFormatString(ytdlPreferences)
@@ -283,7 +283,7 @@ object YtdlpSettingsScreen : Screen {
                             title = "Container",
                             value = containerPreference,
                             values = YtdlContainerPreference.entries,
-                            valueLabel = { it.title },
+                            valueLabel = { stringResource(it.titleRes) },
                             onValueChange = {
                                 ytdlPreferences.containerPreference.set(it)
                                 updateFormatString(ytdlPreferences)
@@ -481,7 +481,7 @@ object YtdlpSettingsScreen : Screen {
                             title = "Playlist Behavior",
                             value = playlistMode,
                             values = YtdlPlaylistMode.entries,
-                            valueLabel = { it.title },
+                            valueLabel = { stringResource(it.titleRes) },
                             onValueChange = { ytdlPreferences.playlistMode.set(it) },
                         )
 

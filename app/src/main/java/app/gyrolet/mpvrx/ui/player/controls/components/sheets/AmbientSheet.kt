@@ -424,12 +424,12 @@ fun AmbientSheet(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 AmbientModeButton(
-                    label = AmbientVisualMode.GLOW.label,
+                    label = stringResource(AmbientVisualMode.GLOW.labelRes),
                     selected = ambientMode == AmbientVisualMode.GLOW,
                     onClick = { viewModel.updateAmbientVisualMode(AmbientVisualMode.GLOW) },
                 )
                 AmbientModeButton(
-                    label = AmbientVisualMode.FRAME_EXTEND.label,
+                    label = stringResource(AmbientVisualMode.FRAME_EXTEND.labelRes),
                     selected = ambientMode == AmbientVisualMode.FRAME_EXTEND,
                     onClick = { viewModel.updateAmbientVisualMode(AmbientVisualMode.FRAME_EXTEND) },
                 )

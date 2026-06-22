@@ -272,7 +272,7 @@ fun YtdlpPanel(
                     ytdlPreferences.preferH264.set(codec == YtdlCodecPreference.H264)
                     updateFormatString(ytdlPreferences)
                   },
-                  label = { Text(codec.title, style = MaterialTheme.typography.labelSmall) },
+                  label = { Text(stringResource(codec.titleRes), style = MaterialTheme.typography.labelSmall) },
                   leadingIcon = if (codecPreference == codec) {
                     { Icon(Icons.Default.Check, null, modifier = Modifier.size(14.dp)) }
                   } else null,

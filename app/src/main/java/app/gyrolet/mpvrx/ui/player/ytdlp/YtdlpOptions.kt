@@ -2,32 +2,34 @@ package app.gyrolet.mpvrx.ui.player.ytdlp
 
 import app.gyrolet.mpvrx.preferences.SubtitlesPreferences
 import app.gyrolet.mpvrx.preferences.YtdlPreferences
+import androidx.annotation.StringRes
+import app.gyrolet.mpvrx.R
 
-enum class YtdlCodecPreference(val title: String) {
-  AUTO("Auto"),
-  H264("H.264 / AVC"),
-  HEVC("HEVC / H.265"),
-  VP9("VP9"),
-  VP9_PROFILE2("VP9 Profile 2"),
-  AV1("AV1"),
+enum class YtdlCodecPreference(@StringRes val titleRes: Int) {
+  AUTO(R.string.enum_auto),
+  H264(R.string.enum_h264),
+  HEVC(R.string.enum_hevc),
+  VP9(R.string.enum_vp9),
+  VP9_PROFILE2(R.string.enum_vp9_profile2),
+  AV1(R.string.enum_av1),
 }
 
-enum class YtdlContainerPreference(val title: String) {
-  ANY("Any"),
-  MP4("MP4"),
-  WEBM("WebM"),
+enum class YtdlContainerPreference(@StringRes val titleRes: Int) {
+  ANY(R.string.enum_any),
+  MP4(R.string.enum_mp4),
+  WEBM(R.string.enum_webm),
 }
 
-enum class YtdlHdrPreference(val title: String) {
-  ANY("Any"),
-  SDR("Prefer SDR"),
-  HDR("Prefer HDR"),
+enum class YtdlHdrPreference(@StringRes val titleRes: Int) {
+  ANY(R.string.enum_any),
+  SDR(R.string.enum_prefer_sdr),
+  HDR(R.string.enum_prefer_hdr),
 }
 
-enum class YtdlPlaylistMode(val title: String) {
-  DEFAULT("yt-dlp default"),
-  SINGLE_VIDEO("Single video only"),
-  WHOLE_PLAYLIST("Whole playlist"),
+enum class YtdlPlaylistMode(@StringRes val titleRes: Int) {
+  DEFAULT(R.string.enum_ytdlp_default),
+  SINGLE_VIDEO(R.string.enum_single_video_only),
+  WHOLE_PLAYLIST(R.string.enum_whole_playlist),
 }
 
 data class YtdlpOptionSettings(

@@ -2,6 +2,8 @@ package app.gyrolet.mpvrx.ui.player
 
 import app.gyrolet.mpvrx.domain.hdr.HdrToysProfile
 import `is`.xyz.mpv.MPVLib
+import androidx.annotation.StringRes
+import app.gyrolet.mpvrx.R
 
 /**
  * Available HDR screen output modes.
@@ -16,37 +18,37 @@ import `is`.xyz.mpv.MPVLib
  * [defaultEnabledMode].  The HDR panel only exposes [selectableModes].
  */
 enum class HdrScreenMode(
-  val title: String,
-  val shortTitle: String,
+  @StringRes val titleRes: Int,
+  @StringRes val shortTitleRes: Int,
   val description: String,
   val hdrToysProfile: HdrToysProfile? = null,
 ) {
   OFF(
-    title = "Off",
-    shortTitle = "Off",
+    titleRes = R.string.hdr_off,
+    shortTitleRes = R.string.hdr_off,
     description = "Normal SDR output",
   ),
   BT_2100_PQ(
-    title = "BT.2100 PQ",
-    shortTitle = "PQ",
+    titleRes = R.string.hdr_bt2100_pq_title,
+    shortTitleRes = R.string.hdr_pq,
     description = "HDR10-style PQ with Astra tone mapping and Bottosson gamut mapping",
     hdrToysProfile = HdrToysProfile.BT_2100_PQ,
   ),
   BT_2100_HLG(
-    title = "BT.2100 HLG",
-    shortTitle = "HLG",
+    titleRes = R.string.hdr_bt2100_hlg_title,
+    shortTitleRes = R.string.hdr_hlg,
     description = "HLG HDR through the hdr-toys Astra and Bottosson shader chain",
     hdrToysProfile = HdrToysProfile.BT_2100_HLG,
   ),
   BT_2020(
-    title = "BT.2020",
-    shortTitle = "BT.2020",
+    titleRes = R.string.hdr_bt2020_title,
+    shortTitleRes = R.string.hdr_bt2020,
     description = "BT.2020 / BT.1886 conversion using hdr-toys gamut mapping",
     hdrToysProfile = HdrToysProfile.BT_2020,
   ),
   LINEAR(
-    title = "Linear HDR",
-    shortTitle = "Linear",
+    titleRes = R.string.hdr_linear_title,
+    shortTitleRes = R.string.hdr_linear,
     description = "High-quality mpv HDR output without hdr-toys shaders",
   );
 
