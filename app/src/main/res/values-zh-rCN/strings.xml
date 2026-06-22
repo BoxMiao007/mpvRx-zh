@@ -248,11 +248,11 @@
   <string name="all_languages">全部（选择性过滤）</string>
   <string name="pref_subtitles_clear_downloads">清除字幕下载</string>
   <string name="pref_subtitles_clear_downloads_summary">删除当前保存位置中的所有文件</string>
-  <string name="pref_subtitles_clear_downloads_confirmation">Are you sure you want to delete all downloaded subtitles? This action cannot be undone.</s
+  <string name="pref_subtitles_clear_downloads_confirmation">确定要删除所有已下载的字幕吗？此操作不可撤销。</string>
 
 ... [OUTPUT TRUNCATED - 17030 chars omitted out of 67030 total] ...
 
-"notification_playing">Playing</string>
+  <string name="notification_playing">正在播放</string>
   <string name="notification_chapter_counter">第 %1$d 章，共 %2$d 章</string>
   <string name="notification_permission_denied">后台播放控制需要通知权限。</string>
   <string name="notification_permission_disabled">MpvRx 的通知已禁用。启用通知以显示播放控制。</string>
