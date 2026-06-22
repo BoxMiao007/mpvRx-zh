@@ -64,13 +64,18 @@ jobs:
           set -e
           STANDARD_RELEASE_DIR="app/build/outputs/apk/standard/release"
           
+          if [ -z "${{ secrets.SIGNING_KEYSTORE }}" ]; then
+            echo "SIGNING_KEYSTORE secret is not available. Skipping signing."
+            exit 0
+          fi
+          
           echo "${{ secrets.SIGNING_KEYSTORE }}" | base64 -d > release.keystore
           
           APK_COUNT=$(find "$STANDARD_RELEASE_DIR" -name "app-standard-*-release-unsigned.apk" -type f | wc -l)
           if [ "$APK_COUNT" -eq 0 ]; then
             echo "No unsigned standard APK files found"
             ls -lah "$STANDARD_RELEASE_DIR"
-            rm release.keystore
+            rm -f release.keystore
             exit 1
           fi
           
@@ -89,7 +94,7 @@ jobs:
             rm "$apk"
           done
           
-          rm release.keystore
+          rm -f release.keystore
           echo "Signed standard APKs:"
           ls -lh "$STANDARD_RELEASE_DIR"/app-standard-*-release.apk
 
@@ -104,25 +109,28 @@ jobs:
               echo "Skipping $abi (not built)"
               continue
             fi
-            dst="mpvRx-${abi}-${VERSION_TAG}.apk"
+            dst="mpvRx-zh-${abi}-${VERSION_TAG}.apk"
             cp "$src" "$dst"
             checksum=$(sha256sum "$dst" | awk '{ print $1 }')
             varname="apk_${abi//-/_}_sha256"
             echo "$varname=$checksum" >> "$GITHUB_ENV"
           done
           
-          ls -lah mpvRx-*.apk
+          ls -lah mpvRx-zh-*.apk
 
-      - name: Prepare release notes from changelog
+      - name: Prepare release notes
         run: |
           set -euo pipefail
-          python3 - <<'PY'
+          
+          # 尝试从 CHANGELOG.md 读取，如果没有则生成默认内容
+          if [ -f "CHANGELOG.md" ]; then
+            python3 - <<'PY'
           from pathlib import Path
-
+          
           changelog = Path("CHANGELOG.md").read_text(encoding="utf-8").splitlines()
           section = []
           in_latest = False
-
+          
           for line in changelog:
               if line.startswith("## "):
                   if in_latest:
@@ -130,41 +138,51 @@ jobs:
                   in_latest = True
               if in_latest:
                   section.append(line)
-
+          
           latest = "\n".join(section).strip()
           if not latest:
-              raise SystemExit("Could not find latest changelog section")
-
+              latest = "版本更新"
+          
           Path("release-notes.md").write_text(latest + "\n", encoding="utf-8")
           PY
+          else
+            echo "## MpvRx 中文版 ${VERSION_TAG}" > release-notes.md
+            echo "" >> release-notes.md
+            echo "基于 MpvRx 的中文汉化版本。" >> release-notes.md
+            echo "" >> release-notes.md
+            echo "### 更新内容" >> release-notes.md
+            echo "- 同步上游代码更新" >> release-notes.md
+            echo "- 完整简体中文界面" >> release-notes.md
+          fi
+          
           cat >> release-notes.md <<EOF
-
+          
           ---
-          ### Checksums
-
-          | Variant | SHA-256 |
-          | ------- | ------- |
-          | arm64-v8a | ${apk_arm64_v8a_sha256} |
-          | armeabi-v7a | ${apk_armeabi_v7a_sha256} |
-          | Universal | ${apk_universal_sha256} |
-          | x86 | ${apk_x86_sha256:-not built} |
-          | x86_64 | ${apk_x86_64_sha256:-not built} |
-
+          ### 校验和
+          
+          | 架构 | SHA-256 |
+          | ---- | ------- |
+          | arm64-v8a | ${apk_arm64_v8a_sha256:-未构建} |
+          | armeabi-v7a | ${apk_armeabi_v7a_sha256:-未构建} |
+          | Universal | ${apk_universal_sha256:-未构建} |
+          | x86 | ${apk_x86_sha256:-未构建} |
+          | x86_64 | ${apk_x86_64_sha256:-未构建} |
+          
           EOF
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.VERSION_TAG }}
-          name: MpvRx ${{ env.VERSION_TAG }}
+          name: "MpvRx 中文版 ${{ env.VERSION_TAG }}"
           body_path: release-notes.md
           generate_release_notes: true
           files: |
-            mpvRx-universal-${{ env.VERSION_TAG }}.apk
-            mpvRx-arm64-v8a-${{ env.VERSION_TAG }}.apk
-            mpvRx-armeabi-v7a-${{ env.VERSION_TAG }}.apk
-            mpvRx-x86-${{ env.VERSION_TAG }}.apk
-            mpvRx-x86_64-${{ env.VERSION_TAG }}.apk
+            mpvRx-zh-universal-${{ env.VERSION_TAG }}.apk
+            mpvRx-zh-arm64-v8a-${{ env.VERSION_TAG }}.apk
+            mpvRx-zh-armeabi-v7a-${{ env.VERSION_TAG }}.apk
+            mpvRx-zh-x86-${{ env.VERSION_TAG }}.apk
+            mpvRx-zh-x86_64-${{ env.VERSION_TAG }}.apk
 
           draft: false
           prerelease: false

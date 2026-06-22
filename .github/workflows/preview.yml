@@ -44,13 +44,18 @@ jobs:
           set -e
           PREVIEW_DIR="app/build/outputs/apk/standard/preview"
           
+          if [ -z "${{ secrets.SIGNING_KEYSTORE }}" ]; then
+            echo "SIGNING_KEYSTORE secret is not available. Skipping signing."
+            exit 0
+          fi
+          
           echo "${{ secrets.SIGNING_KEYSTORE }}" | base64 -d > release.keystore
           
           APK_COUNT=$(find "$PREVIEW_DIR" -name "app-standard-*-preview-unsigned.apk" -type f | wc -l)
           if [ "$APK_COUNT" -eq 0 ]; then
             echo "No unsigned preview APK files found"
             ls -lah "$PREVIEW_DIR"
-            rm release.keystore
+            rm -f release.keystore
             exit 1
           fi
           
@@ -69,7 +74,7 @@ jobs:
             rm "$apk"
           done
           
-          rm release.keystore
+          rm -f release.keystore
           ls -lh "$PREVIEW_DIR"/app-standard-*-preview.apk
 
       - name: Copy build artifacts
@@ -86,7 +91,7 @@ jobs:
           
           for arch in "${apks[@]}"; do
             src="app/build/outputs/apk/standard/preview/app-standard-${arch}-preview.apk"
-            dest="output/mpvRx-preview-r${commit_count}-${arch}.apk"
+            dest="output/mpvRx-zh-preview-r${commit_count}-${arch}.apk"
             if [ -f "$src" ]; then
               cp "$src" "$dest"
               size=$(du -h "$dest" | cut -f1)
@@ -117,11 +122,11 @@ jobs:
           commit_count=${{ needs.build.outputs.commit_count }}
           build_time="${{ needs.build.outputs.build_time }}"
           echo "<!DOCTYPE html>
-          <html lang='en'>
+          <html lang='zh-CN'>
           <head>
             <meta charset='UTF-8'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-            <title>MpvRx Preview Builds</title>
+            <title>MpvRx 中文版 预览构建</title>
             <style>
               body { font-family: sans-serif; padding: 2em; background: #0d1117; color: #c9d1d9; }
               h1 { color: #58a6ff; }
@@ -132,17 +137,17 @@ jobs:
             </style>
           </head>
           <body>
-            <h1>MpvRx Preview Build r${commit_count}</h1>
-            <p>Build time: ${build_time}</p>
-            <p>Download the latest signed APKs:</p>
+            <h1>MpvRx 中文版 预览构建 r${commit_count}</h1>
+            <p>构建时间: ${build_time}</p>
+            <p>下载最新签名 APK：</p>
             <ul>
-              <li><a href='mpvRx-preview-r${commit_count}-universal.apk'>Universal (${{ needs.build.outputs.universal_size }})</a></li>
-              <li><a href='mpvRx-preview-r${commit_count}-arm64-v8a.apk'>arm64-v8a (${{ needs.build.outputs.arm64-v8a_size }})</a></li>
-              <li><a href='mpvRx-preview-r${commit_count}-armeabi-v7a.apk'>armeabi-v7a (${{ needs.build.outputs.armeabi-v7a_size }})</a></li>
-              <li><a href='mpvRx-preview-r${commit_count}-x86.apk'>x86 (${{ needs.build.outputs.x86_size }})</a></li>
-              <li><a href='mpvRx-preview-r${commit_count}-x86_64.apk'>x86_64 (${{ needs.build.outputs.x86_64_size }})</a></li>
+              <li><a href='mpvRx-zh-preview-r${commit_count}-universal.apk'>Universal (${{ needs.build.outputs.universal_size }})</a></li>
+              <li><a href='mpvRx-zh-preview-r${commit_count}-arm64-v8a.apk'>arm64-v8a (${{ needs.build.outputs.arm64-v8a_size }})</a></li>
+              <li><a href='mpvRx-zh-preview-r${commit_count}-armeabi-v7a.apk'>armeabi-v7a (${{ needs.build.outputs.armeabi-v7a_size }})</a></li>
+              <li><a href='mpvRx-zh-preview-r${commit_count}-x86.apk'>x86 (${{ needs.build.outputs.x86_size }})</a></li>
+              <li><a href='mpvRx-zh-preview-r${commit_count}-x86_64.apk'>x86_64 (${{ needs.build.outputs.x86_64_size }})</a></li>
             </ul>
-            <p class='note'>Built automatically from the <code>dev</code> branch.</p>
+            <p class='note'>基于 master 分支自动构建。</p>
           </body>
           </html>" > ./public/index.html
 
